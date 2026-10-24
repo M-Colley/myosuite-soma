@@ -1,0 +1,1229 @@
+{
+  "scope": "Selected numerical results from the historical MyoSuite integration; not a new standalone-package execution. No raw geometry, recordings or weights.",
+  "original_deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+  "native_parity": {
+    "subjects": {
+      "S1": {
+        "frames_compared": 180,
+        "shots_compared": 20,
+        "posed_skin_max_abs_error_m": 5.960464477539062e-07,
+        "posed_individual_muscle_max_abs_error_m": 7.152557373046875e-07,
+        "unet_max_abs_error_m": 0.0,
+        "rigid_max_abs_error": 5.960464477539063e-08,
+        "gaussian_binding_weight_max_abs_error": 1.4900348788149387e-08,
+        "batch1_vs_batch8_max_abs_error_m": 4.172325134277344e-07,
+        "muscle_meshes": 95,
+        "local_assets_verified": true,
+        "matching_weights_available": true,
+        "all_checks_passed": true,
+        "root_convention": "procedural translations used identically by both implementations",
+        "evidence_sha256": "e89dee3440fd697bdaeb567ae2ea0d41a59f491e618ca3052cd2de8f5571b573"
+      },
+      "S2": {
+        "frames_compared": 51,
+        "shots_compared": 13,
+        "heldout_whole_shots": [
+          "shot_006",
+          "shot_012"
+        ],
+        "skin_vertices": 23752,
+        "skin_faces": 47500,
+        "muscle_meshes": 97,
+        "muscle_vertices": 60515,
+        "muscle_faces": 120562,
+        "posed_skin_max_abs_error_m": 4.76837158203125e-07,
+        "posed_individual_muscle_max_abs_error_m": 5.960464477539062e-07,
+        "unet_max_abs_error_m": 0.0,
+        "rigid_max_abs_error": 5.960464477539063e-08,
+        "gaussian_binding_weight_max_abs_error": 1.489840034674117e-08,
+        "batch1_vs_batch8_max_abs_error_m": 4.76837158203125e-07,
+        "elapsed_seconds": 19.008972199997515,
+        "checkpoint_file_sha256": {
+          "S2_ABLATION_UNET_RELEASE_V2_e40_best_data.pth": "f7fe45153079fbe44c9b92b0fca71b0c4d004d3e369935e141fa5276bc7980d3",
+          "S2_ABLATION_UNET_RELEASE_V2_e40_best_data_rigid.pth": "655a7f32d95482c52b80d072767a964587f80b48e667822916de5dada702be32",
+          "S2_static_canon_RELEASE_V2_e40.npy": "33a91b97881801e0601e915f750a23475c0f11a67512b8f786f3182e83c26054"
+        },
+        "all_checks_passed": true,
+        "local_assets_verified": true,
+        "matching_weights_available": true,
+        "root_convention": "zero translation in adapter and released evaluation",
+        "evidence_sha256": "fd75b8170e22723ed7667e662329bc46d2b23fe0f0dbad54565b4582beb8b409"
+      },
+      "S3": {
+        "frames_compared": 51,
+        "shots_compared": 13,
+        "heldout_whole_shots": [
+          "shot_006",
+          "shot_012"
+        ],
+        "skin_vertices": 23752,
+        "skin_faces": 47500,
+        "muscle_meshes": 101,
+        "muscle_vertices": 60515,
+        "muscle_faces": 120562,
+        "posed_skin_max_abs_error_m": 4.76837158203125e-07,
+        "posed_individual_muscle_max_abs_error_m": 5.960464477539062e-07,
+        "unet_max_abs_error_m": 0.0,
+        "rigid_max_abs_error": 5.960464477539063e-08,
+        "gaussian_binding_weight_max_abs_error": 1.4899657896361163e-08,
+        "batch1_vs_batch8_max_abs_error_m": 4.76837158203125e-07,
+        "elapsed_seconds": 27.23930329999712,
+        "checkpoint_file_sha256": {
+          "S3_ABLATION_UNET_RELEASE_V2_e40_best_data.pth": "f747ef23ef670146fab6fc4f31457617f7b389d783fb3bd59ae3620ce6b80bda",
+          "S3_ABLATION_UNET_RELEASE_V2_e40_best_data_rigid.pth": "c7173cb3c4cc1fd1bb5ed13696b07dd62a254dad510c0baf9eafdf3f451dc0c4",
+          "S3_static_canon_RELEASE_V2_e40.npy": "16e4f9e4c293f7c51106e85653c3f22397634ac0536393299e3dda88a1844895"
+        },
+        "all_checks_passed": true,
+        "local_assets_verified": true,
+        "matching_weights_available": true,
+        "root_convention": "zero translation in adapter and released evaluation",
+        "evidence_sha256": "16fcb9c35ca019fac1022e1b7b05e8b9b028d7e42ccbfc33a0db11b97a537440"
+      },
+      "S4": {
+        "frames_compared": 54,
+        "shots_compared": 14,
+        "heldout_whole_shots": [
+          "shot_009",
+          "shot_010"
+        ],
+        "skin_vertices": 23752,
+        "skin_faces": 47500,
+        "muscle_meshes": 99,
+        "muscle_vertices": 60515,
+        "muscle_faces": 120562,
+        "posed_skin_max_abs_error_m": 5.960464477539062e-07,
+        "posed_individual_muscle_max_abs_error_m": 7.152557373046875e-07,
+        "unet_max_abs_error_m": 0.0,
+        "rigid_max_abs_error": 5.960464477539063e-08,
+        "gaussian_binding_weight_max_abs_error": 1.4898572486821138e-08,
+        "batch1_vs_batch8_max_abs_error_m": 3.5762786865234375e-07,
+        "elapsed_seconds": 27.937683399999514,
+        "checkpoint_file_sha256": {
+          "S4_ABLATION_UNET_RELEASE_V2_e40_best_data.pth": "ba9e4b52b5e4d3d57b34166d3bdab201c3051d2ee6000d56595817373f9bd4aa",
+          "S4_ABLATION_UNET_RELEASE_V2_e40_best_data_rigid.pth": "143841cd39e0a61270c934b6c4fbcf750cef2deb018dd8efbf8b2a969ae8b881",
+          "S4_static_canon_RELEASE_V2_e40.npy": "5e769e2e97528cac36dc79e828ec7c276a46943e7e9c725d78a77df9da7a8618"
+        },
+        "all_checks_passed": true,
+        "local_assets_verified": true,
+        "matching_weights_available": true,
+        "root_convention": "zero translation in adapter and released evaluation",
+        "evidence_sha256": "9f00febce8c7972cc1ed866c87bbc066142a15c5b48513cc5129ae735e72ae2b"
+      },
+      "S5": {
+        "frames_compared": 54,
+        "shots_compared": 14,
+        "heldout_whole_shots": [
+          "shot_009",
+          "shot_010"
+        ],
+        "skin_vertices": 23752,
+        "skin_faces": 47500,
+        "muscle_meshes": 97,
+        "muscle_vertices": 60515,
+        "muscle_faces": 120562,
+        "posed_skin_max_abs_error_m": 4.76837158203125e-07,
+        "posed_individual_muscle_max_abs_error_m": 5.960464477539062e-07,
+        "unet_max_abs_error_m": 0.0,
+        "rigid_max_abs_error": 5.960464477539063e-08,
+        "gaussian_binding_weight_max_abs_error": 1.4899868006068573e-08,
+        "batch1_vs_batch8_max_abs_error_m": 4.76837158203125e-07,
+        "elapsed_seconds": 33.428811000005226,
+        "checkpoint_file_sha256": {
+          "S5_ABLATION_UNET_RELEASE_V2_e40_best_data.pth": "054bb431151dd48a83232ed39d02cb3c05ad9a803d7b6cd0c13dc551b55f9e8a",
+          "S5_ABLATION_UNET_RELEASE_V2_e40_best_data_rigid.pth": "60e0229585937092c37bd82c1ec6af2e3046e6aa5431f2b49ba7a5dbcc2ca489",
+          "S5_static_canon_RELEASE_V2_e40.npy": "ce639189cab75ad714c666bc28b32137a7c7369d060717e6967ea7ac1df77374"
+        },
+        "all_checks_passed": true,
+        "local_assets_verified": true,
+        "matching_weights_available": true,
+        "root_convention": "zero translation in adapter and released evaluation",
+        "evidence_sha256": "3295fc782268774216b206fcdb81e7083d67b4978149c03e7de15b1cc34b0b46"
+      }
+    },
+    "total_real_poses": 390,
+    "total_shots": 74,
+    "interpretation": "Implementation parity with released equations, not anatomical validity or predictive heldout generalization."
+  },
+  "subject_registration": {
+    "source_states": 1192,
+    "cases": [
+      {
+        "subject": "S2",
+        "case": "fullbody",
+        "frames": 97,
+        "anatomical_surfaces": 97,
+        "heldout_anchor_before_mm": 15.545336893025217,
+        "heldout_anchor_after_mm": 16.589039653802672,
+        "heldout_anchor_delta_mm": 1.043702760777455,
+        "raw_skin_min_world_z_mm": -22.811008617281914,
+        "registered_skin_min_world_z_mm": 6.000000052154064,
+        "maximum_correction_velocity_m_s": 0.08760569760191657,
+        "maximum_combined_displacement_mm": 52.06322109885128,
+        "minimum_sampled_registration_jacobian": 0.11401457556961288,
+        "segment_scale_range": [
+          0.9225482110506067,
+          1.0717566361147333
+        ],
+        "registration_strength_range": [
+          0.9999999999999996,
+          0.9999999999999996
+        ],
+        "surface_frames_checked": [
+          0,
+          48,
+          95,
+          96
+        ],
+        "surface_ratio_percentiles": [
+          0,
+          1,
+          5,
+          50,
+          95,
+          99,
+          100
+        ],
+        "surface_edge_length_ratio_percentiles": [
+          0.3712617667307673,
+          0.8472493438557717,
+          0.9165497116617889,
+          1.0041699890716096,
+          1.1096505479016998,
+          1.1624391465470119,
+          1.3090127216967513
+        ],
+        "triangle_area_ratio_percentiles": [
+          0.2715379173475887,
+          0.7759872157112013,
+          0.8858818354097935,
+          1.0152825857209526,
+          1.1394478193301918,
+          1.2073726381250305,
+          1.7253588833262599
+        ],
+        "minimum_contact_compression_scale": 0.22074631631919064,
+        "maximum_extra_full_support_penetration_mm": 0.0,
+        "native_primitive_min_clearance_mm": 4.999999999999946,
+        "all_temporal_solvers_converged": true,
+        "all_geometry_finite": true,
+        "physical_parameters_unchanged": true,
+        "deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+        "config_sha256": "7bdaca86a256fe16935f0a4f3f1653d84daa4ebc85695d4d67fa04104ffe6cb6",
+        "source_profile_sha256": "4c127bf6a88bec05231ab1763e1b6925a4f8977126a55d3c20f80f109fbd1ecd",
+        "source_motion_sha256": "abe6da567a2a9129b47b955aec060ccd9092afa2ca044237c86431fe6c21d96d",
+        "bounds": {
+          "radius_m": 0.35,
+          "max_displacement_m": 0.12,
+          "min_segment_scale": 0.6,
+          "max_segment_scale": 1.5,
+          "min_jacobian": 0.05,
+          "max_gradient_norm": 0.6
+        },
+        "contact_bounds": [
+          {
+            "ankle": "RightFoot",
+            "toe": "RightToeBase",
+            "collision_geoms": [
+              "r_foot_col1",
+              "r_foot_col3",
+              "r_foot_col4",
+              "r_bofoot_col1",
+              "r_bofoot_col2"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          },
+          {
+            "ankle": "LeftFoot",
+            "toe": "LeftToeBase",
+            "collision_geoms": [
+              "l_foot_col1",
+              "l_foot_col3",
+              "l_foot_col4",
+              "l_bofoot_col1",
+              "l_bofoot_col2"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          }
+        ]
+      },
+      {
+        "subject": "S2",
+        "case": "walking",
+        "frames": 201,
+        "anatomical_surfaces": 97,
+        "heldout_anchor_before_mm": 56.61107596363555,
+        "heldout_anchor_after_mm": 35.6303887530659,
+        "heldout_anchor_delta_mm": -20.98068721056965,
+        "raw_skin_min_world_z_mm": -92.38892793655396,
+        "registered_skin_min_world_z_mm": -48.9884614944458,
+        "maximum_correction_velocity_m_s": 4.409069450678576,
+        "maximum_combined_displacement_mm": 97.29787595897812,
+        "minimum_sampled_registration_jacobian": 0.06400000000000002,
+        "segment_scale_range": [
+          0.9604957752146571,
+          1.1068295872918306
+        ],
+        "registration_strength_range": [
+          0.424900424250401,
+          0.9999999999999999
+        ],
+        "surface_frames_checked": [
+          0,
+          100,
+          197,
+          200
+        ],
+        "surface_ratio_percentiles": [
+          0,
+          1,
+          5,
+          50,
+          95,
+          99,
+          100
+        ],
+        "surface_edge_length_ratio_percentiles": [
+          0.4067366118289585,
+          0.9049557503308518,
+          0.9544394085509285,
+          1.0,
+          1.0500006150060697,
+          1.097030696824001,
+          1.749714298406096
+        ],
+        "triangle_area_ratio_percentiles": [
+          0.030946936199878657,
+          0.8628051057932185,
+          0.9407070045065121,
+          1.0,
+          1.0632030568916788,
+          1.1046116438935714,
+          1.708514440762081
+        ],
+        "minimum_contact_compression_scale": 0.2,
+        "maximum_extra_full_support_penetration_mm": 39.17420395251163,
+        "native_primitive_min_clearance_mm": -19.499020158549083,
+        "all_temporal_solvers_converged": true,
+        "all_geometry_finite": true,
+        "physical_parameters_unchanged": true,
+        "deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+        "config_sha256": "234b24de9d205c5df3332229e4d0e2163db62a9d560c077267d1a348dc12a7c7",
+        "source_profile_sha256": "4c8e3755a19f168016f25a904f919f391a12379de82d56ccdf1d6b2a5843e5a1",
+        "source_motion_sha256": "ff81b1411851cd601b9195ee0416d7bc64fe799cae8f0abcb0772f253facb718",
+        "bounds": {
+          "radius_m": 0.35,
+          "max_displacement_m": 0.12,
+          "min_segment_scale": 0.6,
+          "max_segment_scale": 1.5,
+          "min_jacobian": 0.05,
+          "max_gradient_norm": 0.6
+        },
+        "contact_bounds": [
+          {
+            "ankle": "RightFoot",
+            "toe": "RightToeBase",
+            "collision_geoms": [
+              "foot_col1_r",
+              "foot_col3_r",
+              "foot_col4_r",
+              "bofoot_col1_r",
+              "bofoot_col2_r"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          },
+          {
+            "ankle": "LeftFoot",
+            "toe": "LeftToeBase",
+            "collision_geoms": [
+              "foot_col1_l",
+              "foot_col3_l",
+              "foot_col4_l",
+              "bofoot_col1_l",
+              "bofoot_col2_l"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          }
+        ]
+      },
+      {
+        "subject": "S3",
+        "case": "fullbody",
+        "frames": 97,
+        "anatomical_surfaces": 101,
+        "heldout_anchor_before_mm": 10.661176250110753,
+        "heldout_anchor_after_mm": 15.691202280290112,
+        "heldout_anchor_delta_mm": 5.030026030179359,
+        "raw_skin_min_world_z_mm": 6.538489833474159,
+        "registered_skin_min_world_z_mm": 10.834487155079842,
+        "maximum_correction_velocity_m_s": 0.06054768906350797,
+        "maximum_combined_displacement_mm": 42.309593923013026,
+        "minimum_sampled_registration_jacobian": 0.3003774528531936,
+        "segment_scale_range": [
+          0.9562386713474649,
+          1.1131483224655028
+        ],
+        "registration_strength_range": [
+          0.9999999999999996,
+          0.9999999999999996
+        ],
+        "surface_frames_checked": [
+          0,
+          48,
+          96
+        ],
+        "surface_ratio_percentiles": [
+          0,
+          1,
+          5,
+          50,
+          95,
+          99,
+          100
+        ],
+        "surface_edge_length_ratio_percentiles": [
+          0.8254229021049968,
+          0.9257255509565908,
+          0.9585576139740749,
+          1.0032416302476581,
+          1.0809310456900842,
+          1.1350630052222799,
+          1.3199889887069622
+        ],
+        "triangle_area_ratio_percentiles": [
+          0.2979986970693823,
+          0.8947803423488526,
+          0.9418361432406199,
+          1.0114139732496006,
+          1.1102058878911467,
+          1.1950943678858132,
+          1.8164254740608983
+        ],
+        "minimum_contact_compression_scale": 0.9999999999999996,
+        "maximum_extra_full_support_penetration_mm": 0.0,
+        "native_primitive_min_clearance_mm": 4.999999999999946,
+        "all_temporal_solvers_converged": true,
+        "all_geometry_finite": true,
+        "physical_parameters_unchanged": true,
+        "deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+        "config_sha256": "7bdaca86a256fe16935f0a4f3f1653d84daa4ebc85695d4d67fa04104ffe6cb6",
+        "source_profile_sha256": "897938ec43508b5f7d332e5a446f07496a6dce6060e416222ecadda491d9e018",
+        "source_motion_sha256": "abe6da567a2a9129b47b955aec060ccd9092afa2ca044237c86431fe6c21d96d",
+        "bounds": {
+          "radius_m": 0.35,
+          "max_displacement_m": 0.12,
+          "min_segment_scale": 0.6,
+          "max_segment_scale": 1.5,
+          "min_jacobian": 0.05,
+          "max_gradient_norm": 0.6
+        },
+        "contact_bounds": [
+          {
+            "ankle": "RightFoot",
+            "toe": "RightToeBase",
+            "collision_geoms": [
+              "r_foot_col1",
+              "r_foot_col3",
+              "r_foot_col4",
+              "r_bofoot_col1",
+              "r_bofoot_col2"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          },
+          {
+            "ankle": "LeftFoot",
+            "toe": "LeftToeBase",
+            "collision_geoms": [
+              "l_foot_col1",
+              "l_foot_col3",
+              "l_foot_col4",
+              "l_bofoot_col1",
+              "l_bofoot_col2"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          }
+        ]
+      },
+      {
+        "subject": "S3",
+        "case": "walking",
+        "frames": 201,
+        "anatomical_surfaces": 101,
+        "heldout_anchor_before_mm": 39.66563946189789,
+        "heldout_anchor_after_mm": 26.264865115338097,
+        "heldout_anchor_delta_mm": -13.400774346559793,
+        "raw_skin_min_world_z_mm": -77.6582583785057,
+        "registered_skin_min_world_z_mm": -18.035687506198883,
+        "maximum_correction_velocity_m_s": 2.4005331891946518,
+        "maximum_combined_displacement_mm": 93.17430738882726,
+        "minimum_sampled_registration_jacobian": 0.06400000000000002,
+        "segment_scale_range": [
+          0.9752461475561938,
+          1.1296421745709835
+        ],
+        "registration_strength_range": [
+          0.2902224156560932,
+          1.0
+        ],
+        "surface_frames_checked": [
+          0,
+          100,
+          198,
+          200
+        ],
+        "surface_ratio_percentiles": [
+          0,
+          1,
+          5,
+          50,
+          95,
+          99,
+          100
+        ],
+        "surface_edge_length_ratio_percentiles": [
+          0.41055932050715177,
+          0.9062135164923282,
+          0.950796105367319,
+          1.0,
+          1.053904779161799,
+          1.1033277640408403,
+          1.506873591142716
+        ],
+        "triangle_area_ratio_percentiles": [
+          0.2649052616723446,
+          0.8759649333397477,
+          0.9319462231213447,
+          1.0,
+          1.0718792613186305,
+          1.1167849673404382,
+          1.5911582680310405
+        ],
+        "minimum_contact_compression_scale": 0.2,
+        "maximum_extra_full_support_penetration_mm": 19.113959674395055,
+        "native_primitive_min_clearance_mm": -19.499020158549083,
+        "all_temporal_solvers_converged": true,
+        "all_geometry_finite": true,
+        "physical_parameters_unchanged": true,
+        "deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+        "config_sha256": "234b24de9d205c5df3332229e4d0e2163db62a9d560c077267d1a348dc12a7c7",
+        "source_profile_sha256": "45f428a508166e1fc724013089fc40bed2d94a7c886846ed4d22a986deb04813",
+        "source_motion_sha256": "ff81b1411851cd601b9195ee0416d7bc64fe799cae8f0abcb0772f253facb718",
+        "bounds": {
+          "radius_m": 0.35,
+          "max_displacement_m": 0.12,
+          "min_segment_scale": 0.6,
+          "max_segment_scale": 1.5,
+          "min_jacobian": 0.05,
+          "max_gradient_norm": 0.6
+        },
+        "contact_bounds": [
+          {
+            "ankle": "RightFoot",
+            "toe": "RightToeBase",
+            "collision_geoms": [
+              "foot_col1_r",
+              "foot_col3_r",
+              "foot_col4_r",
+              "bofoot_col1_r",
+              "bofoot_col2_r"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          },
+          {
+            "ankle": "LeftFoot",
+            "toe": "LeftToeBase",
+            "collision_geoms": [
+              "foot_col1_l",
+              "foot_col3_l",
+              "foot_col4_l",
+              "bofoot_col1_l",
+              "bofoot_col2_l"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          }
+        ]
+      },
+      {
+        "subject": "S4",
+        "case": "fullbody",
+        "frames": 97,
+        "anatomical_surfaces": 99,
+        "heldout_anchor_before_mm": 16.83090945452459,
+        "heldout_anchor_after_mm": 20.838288884416478,
+        "heldout_anchor_delta_mm": 4.007379429891888,
+        "raw_skin_min_world_z_mm": -87.75591850280762,
+        "registered_skin_min_world_z_mm": -39.94712233543396,
+        "maximum_correction_velocity_m_s": 0.0803654239267365,
+        "maximum_combined_displacement_mm": 57.217246349706,
+        "minimum_sampled_registration_jacobian": 0.26126312366305726,
+        "segment_scale_range": [
+          0.9378134075226053,
+          1.106529004998386
+        ],
+        "registration_strength_range": [
+          0.9999999999999996,
+          0.9999999999999996
+        ],
+        "surface_frames_checked": [
+          0,
+          48,
+          50,
+          96
+        ],
+        "surface_ratio_percentiles": [
+          0,
+          1,
+          5,
+          50,
+          95,
+          99,
+          100
+        ],
+        "surface_edge_length_ratio_percentiles": [
+          0.33517788820321287,
+          0.8147815337829163,
+          0.9128074588513523,
+          1.002156605662314,
+          1.0968323104384825,
+          1.1534124656328988,
+          1.581867271218071
+        ],
+        "triangle_area_ratio_percentiles": [
+          0.21824694141324683,
+          0.6780029556517565,
+          0.8610020902861988,
+          1.003941165712765,
+          1.1411611753197095,
+          1.208754005638676,
+          1.5881881017298367
+        ],
+        "minimum_contact_compression_scale": 0.2,
+        "maximum_extra_full_support_penetration_mm": 44.94723863447974,
+        "native_primitive_min_clearance_mm": 4.999999999999946,
+        "all_temporal_solvers_converged": true,
+        "all_geometry_finite": true,
+        "physical_parameters_unchanged": true,
+        "deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+        "config_sha256": "7bdaca86a256fe16935f0a4f3f1653d84daa4ebc85695d4d67fa04104ffe6cb6",
+        "source_profile_sha256": "69e3b18636eb1cd69e101bf467ee8e95a1c37f96b71e7675f6cb81c061d5e052",
+        "source_motion_sha256": "abe6da567a2a9129b47b955aec060ccd9092afa2ca044237c86431fe6c21d96d",
+        "bounds": {
+          "radius_m": 0.35,
+          "max_displacement_m": 0.12,
+          "min_segment_scale": 0.6,
+          "max_segment_scale": 1.5,
+          "min_jacobian": 0.05,
+          "max_gradient_norm": 0.6
+        },
+        "contact_bounds": [
+          {
+            "ankle": "RightFoot",
+            "toe": "RightToeBase",
+            "collision_geoms": [
+              "r_foot_col1",
+              "r_foot_col3",
+              "r_foot_col4",
+              "r_bofoot_col1",
+              "r_bofoot_col2"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          },
+          {
+            "ankle": "LeftFoot",
+            "toe": "LeftToeBase",
+            "collision_geoms": [
+              "l_foot_col1",
+              "l_foot_col3",
+              "l_foot_col4",
+              "l_bofoot_col1",
+              "l_bofoot_col2"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          }
+        ]
+      },
+      {
+        "subject": "S4",
+        "case": "walking",
+        "frames": 201,
+        "anatomical_surfaces": 99,
+        "heldout_anchor_before_mm": 48.93395584098903,
+        "heldout_anchor_after_mm": 29.525476721382017,
+        "heldout_anchor_delta_mm": -19.408479119607012,
+        "raw_skin_min_world_z_mm": -94.56977993249893,
+        "registered_skin_min_world_z_mm": -59.179551899433136,
+        "maximum_correction_velocity_m_s": 4.194039729756894,
+        "maximum_combined_displacement_mm": 97.14504042729753,
+        "minimum_sampled_registration_jacobian": 0.06400000000000002,
+        "segment_scale_range": [
+          0.9771534172413764,
+          1.1477623024251642
+        ],
+        "registration_strength_range": [
+          0.17799339500681402,
+          1.0
+        ],
+        "surface_frames_checked": [
+          0,
+          100,
+          195,
+          200
+        ],
+        "surface_ratio_percentiles": [
+          0,
+          1,
+          5,
+          50,
+          95,
+          99,
+          100
+        ],
+        "surface_edge_length_ratio_percentiles": [
+          0.39983997297364815,
+          0.8858984726320857,
+          0.9543660183752234,
+          1.0,
+          1.0589730136609323,
+          1.124140269358778,
+          1.798262882536216
+        ],
+        "triangle_area_ratio_percentiles": [
+          0.34287581926403166,
+          0.8320755113576941,
+          0.9260661273161371,
+          1.0,
+          1.0761399155485254,
+          1.13365552323514,
+          1.7314425043961879
+        ],
+        "minimum_contact_compression_scale": 0.2,
+        "maximum_extra_full_support_penetration_mm": 51.98185012612006,
+        "native_primitive_min_clearance_mm": -19.499020158549083,
+        "all_temporal_solvers_converged": true,
+        "all_geometry_finite": true,
+        "physical_parameters_unchanged": true,
+        "deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+        "config_sha256": "234b24de9d205c5df3332229e4d0e2163db62a9d560c077267d1a348dc12a7c7",
+        "source_profile_sha256": "8611b5526962afafe1a2c63cfeaddd752566fe587556b2aec710b974db722bf2",
+        "source_motion_sha256": "ff81b1411851cd601b9195ee0416d7bc64fe799cae8f0abcb0772f253facb718",
+        "bounds": {
+          "radius_m": 0.35,
+          "max_displacement_m": 0.12,
+          "min_segment_scale": 0.6,
+          "max_segment_scale": 1.5,
+          "min_jacobian": 0.05,
+          "max_gradient_norm": 0.6
+        },
+        "contact_bounds": [
+          {
+            "ankle": "RightFoot",
+            "toe": "RightToeBase",
+            "collision_geoms": [
+              "foot_col1_r",
+              "foot_col3_r",
+              "foot_col4_r",
+              "bofoot_col1_r",
+              "bofoot_col2_r"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          },
+          {
+            "ankle": "LeftFoot",
+            "toe": "LeftToeBase",
+            "collision_geoms": [
+              "foot_col1_l",
+              "foot_col3_l",
+              "foot_col4_l",
+              "bofoot_col1_l",
+              "bofoot_col2_l"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          }
+        ]
+      },
+      {
+        "subject": "S5",
+        "case": "fullbody",
+        "frames": 97,
+        "anatomical_surfaces": 97,
+        "heldout_anchor_before_mm": 14.268807419419309,
+        "heldout_anchor_after_mm": 14.066783592555321,
+        "heldout_anchor_delta_mm": -0.20202382686398757,
+        "raw_skin_min_world_z_mm": -113.31088840961456,
+        "registered_skin_min_world_z_mm": -71.65958732366562,
+        "maximum_correction_velocity_m_s": 0.06569041533061613,
+        "maximum_combined_displacement_mm": 60.745098601999956,
+        "minimum_sampled_registration_jacobian": 0.3576171882269042,
+        "segment_scale_range": [
+          0.9738867508735463,
+          1.000871583619798
+        ],
+        "registration_strength_range": [
+          0.9999999999999996,
+          0.9999999999999996
+        ],
+        "surface_frames_checked": [
+          0,
+          39,
+          48,
+          96
+        ],
+        "surface_ratio_percentiles": [
+          0,
+          1,
+          5,
+          50,
+          95,
+          99,
+          100
+        ],
+        "surface_edge_length_ratio_percentiles": [
+          0.13464094315976122,
+          0.7779728601800885,
+          0.9470929488228541,
+          1.0001646534198327,
+          1.0569066120395019,
+          1.0984414172832766,
+          1.229360520608959
+        ],
+        "triangle_area_ratio_percentiles": [
+          0.049449278684626695,
+          0.6683238302870455,
+          0.9209382244802724,
+          1.0014260279995963,
+          1.0759322965396108,
+          1.1137719955962735,
+          1.4352740087242488
+        ],
+        "minimum_contact_compression_scale": 0.2,
+        "maximum_extra_full_support_penetration_mm": 76.65970410176845,
+        "native_primitive_min_clearance_mm": 4.999999999999946,
+        "all_temporal_solvers_converged": true,
+        "all_geometry_finite": true,
+        "physical_parameters_unchanged": true,
+        "deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+        "config_sha256": "7bdaca86a256fe16935f0a4f3f1653d84daa4ebc85695d4d67fa04104ffe6cb6",
+        "source_profile_sha256": "8c4005d7525bfd6eb65f0a32bcb70fc569d1db14f2fa2e1d9d3c5f5e851156e8",
+        "source_motion_sha256": "abe6da567a2a9129b47b955aec060ccd9092afa2ca044237c86431fe6c21d96d",
+        "bounds": {
+          "radius_m": 0.35,
+          "max_displacement_m": 0.12,
+          "min_segment_scale": 0.6,
+          "max_segment_scale": 1.5,
+          "min_jacobian": 0.05,
+          "max_gradient_norm": 0.6
+        },
+        "contact_bounds": [
+          {
+            "ankle": "RightFoot",
+            "toe": "RightToeBase",
+            "collision_geoms": [
+              "r_foot_col1",
+              "r_foot_col3",
+              "r_foot_col4",
+              "r_bofoot_col1",
+              "r_bofoot_col2"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          },
+          {
+            "ankle": "LeftFoot",
+            "toe": "LeftToeBase",
+            "collision_geoms": [
+              "l_foot_col1",
+              "l_foot_col3",
+              "l_foot_col4",
+              "l_bofoot_col1",
+              "l_bofoot_col2"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          }
+        ]
+      },
+      {
+        "subject": "S5",
+        "case": "walking",
+        "frames": 201,
+        "anatomical_surfaces": 97,
+        "heldout_anchor_before_mm": 53.58890146500754,
+        "heldout_anchor_after_mm": 28.966206900268148,
+        "heldout_anchor_delta_mm": -24.62269456473939,
+        "raw_skin_min_world_z_mm": -145.68392932415009,
+        "registered_skin_min_world_z_mm": -88.51663768291473,
+        "maximum_correction_velocity_m_s": 4.02925248227881,
+        "maximum_combined_displacement_mm": 96.7591293564108,
+        "minimum_sampled_registration_jacobian": 0.06400000000000002,
+        "segment_scale_range": [
+          0.9860935466656773,
+          1.0355366428748365
+        ],
+        "registration_strength_range": [
+          0.2614049656040273,
+          1.0
+        ],
+        "surface_frames_checked": [
+          0,
+          100,
+          195,
+          200
+        ],
+        "surface_ratio_percentiles": [
+          0,
+          1,
+          5,
+          50,
+          95,
+          99,
+          100
+        ],
+        "surface_edge_length_ratio_percentiles": [
+          0.4284560547360528,
+          0.8607650931054077,
+          0.9429365640663843,
+          1.0,
+          1.0571325850174182,
+          1.1128767904711312,
+          1.4815793507704185
+        ],
+        "triangle_area_ratio_percentiles": [
+          0.3352157255032369,
+          0.7791768044548736,
+          0.9162233154833308,
+          1.0,
+          1.0743197158326743,
+          1.1222724317355883,
+          1.4039326340575309
+        ],
+        "minimum_contact_compression_scale": 0.2,
+        "maximum_extra_full_support_penetration_mm": 83.96796757561825,
+        "native_primitive_min_clearance_mm": -19.499020158549083,
+        "all_temporal_solvers_converged": true,
+        "all_geometry_finite": true,
+        "physical_parameters_unchanged": true,
+        "deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+        "config_sha256": "234b24de9d205c5df3332229e4d0e2163db62a9d560c077267d1a348dc12a7c7",
+        "source_profile_sha256": "fc841a2c569c2ce3ac1953e30725a05646e16d9261da0d3d79bf4b78317ae7c5",
+        "source_motion_sha256": "ff81b1411851cd601b9195ee0416d7bc64fe799cae8f0abcb0772f253facb718",
+        "bounds": {
+          "radius_m": 0.35,
+          "max_displacement_m": 0.12,
+          "min_segment_scale": 0.6,
+          "max_segment_scale": 1.5,
+          "min_jacobian": 0.05,
+          "max_gradient_norm": 0.6
+        },
+        "contact_bounds": [
+          {
+            "ankle": "RightFoot",
+            "toe": "RightToeBase",
+            "collision_geoms": [
+              "foot_col1_r",
+              "foot_col3_r",
+              "foot_col4_r",
+              "bofoot_col1_r",
+              "bofoot_col2_r"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          },
+          {
+            "ankle": "LeftFoot",
+            "toe": "LeftToeBase",
+            "collision_geoms": [
+              "foot_col1_l",
+              "foot_col3_l",
+              "foot_col4_l",
+              "bofoot_col1_l",
+              "bofoot_col2_l"
+            ],
+            "floor_geom": "floor",
+            "radius_m": 0.1,
+            "blend_m": 0.06,
+            "height_m": 0.16,
+            "min_scale": 0.2,
+            "clearance_m": 0.001,
+            "contact_distance_m": 0.025,
+            "release_distance_m": 0.09,
+            "temporal_weight": 2.0,
+            "smoothing_seconds": 0.06
+          }
+        ]
+      }
+    ],
+    "independent_anatomical_validation": false
+  },
+  "s1_registered_geometry": {
+    "fullbody": {
+      "registered_skin_min_world_z_mm": -6.899048108607531,
+      "maximum_combined_displacement_mm": 50.155254049659106,
+      "minimum_sampled_registration_jacobian": 0.4042913877311908,
+      "metric_scope": "Final S1 registered geometry; source report uses pre-contact registration and post-contact minima, distinct from raw released geometry."
+    },
+    "walking": {
+      "registered_skin_min_world_z_mm": -27.05821953713894,
+      "maximum_combined_displacement_mm": 54.138071930510115,
+      "minimum_sampled_registration_jacobian": 0.06399999999999996,
+      "metric_scope": "Final S1 registered geometry; source report uses pre-contact registration and post-contact minima, distinct from raw released geometry."
+    }
+  },
+  "recorded_retargeting": {
+    "protocol": {
+      "profile_calibration": "Unchanged synthetic-pose calibration from soma-deep-dive; none of the20real shots fitted its scale/bases/rest geometry.",
+      "solver_development_shot": "shot_015 was used to detect and fix the shoulder-plane singularity; it is reported separately, not treated as an independent solver holdout.",
+      "independent_whole_shot_tests": [
+        "shot_003",
+        "shot_006"
+      ],
+      "sampling": "17uniform keyframes spanning each complete recording, including first/last frames; all poses retained and solved independently with the same fixed objective and bounded multistart.",
+      "official_soma_model_heldout_shots": [
+        "shot_003",
+        "shot_006",
+        "shot_015"
+      ],
+      "official_split_sha256": "82288e17e1f0fd9359732a1693b30f90751e1b5035c91b54893b3ff1c5787ce2",
+      "families": "Measured distinct root/limb excursion patterns, not externally supplied activity labels. Shot003 has0.689m maximum root-axis excursion; shot006 has2.113m. Shot015 is a low-root-excursion/large-arm-excursion development recording.",
+      "interpretation": "Per-pose IK fitting error validates retargeting and feasibility; it is not predictive generalization or controller performance."
+    },
+    "strict_independent_keyframes": {
+      "frames": 34,
+      "source_anchor_rmse_mm": 24.66636015654349,
+      "visual_roundtrip_rmse_mm": 39.63198280391911,
+      "worst_source_anchor_mm": 76.71717890491027,
+      "worst_visual_joint_mm": 84.13285974201722
+    }
+  },
+  "recorded_registered_shot006": {
+    "frames": 76,
+    "physical_parameters_unchanged": true,
+    "heldout_before_mm": 37.267197198307755,
+    "heldout_after_mm": 23.000905887983627,
+    "maximum_combined_displacement_mm": 77.0737298198327
+  },
+  "conditioning_synthetic_only": {
+    "title": "Synthetic corrective pipeline on real S1 anatomy",
+    "physiologically_validated": false,
+    "synthetic_only": true,
+    "train": {
+      "frames": 32,
+      "vertices_per_frame": 27894,
+      "observed_vertices": 27894,
+      "baseline_rmse_m": 0.000654853743531307,
+      "corrected_rmse_m": 1.554517342460152e-10,
+      "maximum_error_m": 1.2292641349276323e-09,
+      "maximum_correction_m": 0.0029999997932463884,
+      "data_kind": "synthetic",
+      "physiologically_validated": false
+    },
+    "holdout": {
+      "frames": 8,
+      "vertices_per_frame": 27894,
+      "observed_vertices": 27894,
+      "baseline_rmse_m": 0.0005265367781077283,
+      "corrected_rmse_m": 9.48432323321943e-11,
+      "maximum_error_m": 7.785150440975386e-10,
+      "maximum_correction_m": 0.0029999997932463884,
+      "data_kind": "synthetic",
+      "physiologically_validated": false
+    },
+    "validation_gate": {
+      "data_kind": "synthetic",
+      "matched_pose_different_load_pairs": 20,
+      "eligible_for_external_validation": false,
+      "physiologically_validated": false,
+      "can_claim_physiological_validity": false,
+      "reasons": [
+        "synthetic geometry is not independent paired physiology data",
+        "Missing synchronized geometry/physiology measurement protocol"
+      ],
+      "remaining_gate": "Independent measured holdout geometry, uncertainty and anatomical review"
+    },
+    "fixed_pose_zero_reference_max_error_m": 0.0,
+    "fixed_pose_changed_activation_max_geometry_difference_m": 0.0030545839108526707,
+    "native_model_parameters_unchanged": true,
+    "pickle_free_animation_roundtrip": true,
+    "source_checkpoint_sha256": "e4b3bb781cec04773177efea778680eeda6b3c667b5300617bf311a73af15438",
+    "warning": "This validates software and mathematical recovery of fabricated targets only; it is not measured load-dependent anatomy."
+  },
+  "historical_integration_tests": {
+    "integration-tests.xml": {
+      "tests": "194",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "1",
+      "time": "30.725"
+    },
+    "core-regression-tests.xml": {
+      "tests": "312",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "6",
+      "time": "92.865"
+    },
+    "model-parity-tests.xml": {
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.190"
+    },
+    "compatibility/python310-geometry-final.xml": {
+      "tests": "67",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "21.943"
+    },
+    "compatibility/python314-geometry-final.xml": {
+      "tests": "67",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "27.934"
+    }
+  },
+  "limitations": [
+    "Every profile was fitted to its subject rig and rigid checkpoint; S1 numeric fits were not copied.",
+    "Calibration holds out intermediate synthetic frames; independent walking uses actual published policy states.",
+    "Registered held-out controls measure source joint anchors, not measured human tissue positions.",
+    "Registration is bounded; residual floor penetration and worsened held-out anchors must remain reported.",
+    "Whole-skin world-z minima are not contact-force or tissue-mechanics validation.",
+    "Correction velocity differentiates registered-minus-raw skin displacement; it is not total skin velocity or a guaranteed temporal bound.",
+    "Positive sampled registration Jacobians and fixed-membership compression scales do not certify combined-field injectivity.",
+    "Measured matched-pose geometry with synchronized load and physiology for conditional training/validation",
+    "Anatomical review of muscle-head and tendon correspondences",
+    "Further contact/shape modelling to resolve reported residual penetration without unvalidated morphology changes"
+  ]
+}

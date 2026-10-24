@@ -1,0 +1,50 @@
+{
+  "data_root": "../local-assets/SKIM_dataset",
+  "subject": "S1",
+  "checkpoint": "../local-assets/SOMA_checkpoints/S1_ABLATION_UNET_RELEASE_V2_e40_best_data.pth",
+  "preset": "myoElbow1D6",
+  "environment": "myoElbowPose1D6MFixed-v0",
+  "basis": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "output_rotation": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "output_translation": [
+    0,
+    0,
+    0
+  ],
+  "scale": 1.0,
+  "muscle_map": {},
+  "device": "auto",
+  "batch_size": 32
+}

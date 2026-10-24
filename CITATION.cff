@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Cite this integration and the original SOMA and MyoSuite research when using it."
+type: software
+title: "MyoSuite–SOMA"
+version: 0.1.0a1
+authors:
+  - family-names: Colley
+    given-names: Mark
+repository-code: "https://github.com/M-Colley/myosuite-soma"
+license: Apache-2.0
+keywords:
+  - musculoskeletal simulation
+  - anatomical visualization
+  - SOMA
+  - MyoSuite

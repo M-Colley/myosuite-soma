@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "myosuite-soma"
+version = "0.1.0a1"
+description = "SOMA pose-conditioned muscle and skin anatomy for MuJoCo and MyoSuite"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md", "licenses/*"]
+authors = [{name = "Mark Colley"}]
+dependencies = ["numpy>=1.24", "scipy>=1.10", "mujoco>=3.15", "osqp>=1.1.3"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Scientific/Engineering :: Visualization",
+]
+
+[project.optional-dependencies]
+inference = ["torch>=2.13"]
+myosuite = ["myosuite>=3.0.0"]
+render = ["mujoco[usd]>=3.15", "imageio[ffmpeg]>=2.31", "Pillow>=10.1"]
+benchmark = ["psutil>=5.9"]
+test = ["pytest>=8", "ruff==0.4.4", "build>=1.2", "twine>=5"]
+
+[project.urls]
+Homepage = "https://github.com/M-Colley/myosuite-soma"
+Repository = "https://github.com/M-Colley/myosuite-soma"
+Issues = "https://github.com/M-Colley/myosuite-soma/issues"
+
+[project.scripts]
+myosuite-soma = "myosuite_soma.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/myosuite_soma"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "docs", "examples", "integration", "validation", "licenses", "assets", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "CITATION.cff", "pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88

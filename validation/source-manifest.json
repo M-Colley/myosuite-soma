@@ -1,0 +1,26 @@
+{
+  "scope": "Historical local integration validation before standalone package extraction; original reports are not redistributed in full. Paths identify the original validation bundle, not a public download. This file records exact original byte hashes.",
+  "original_bundle": "outputs/soma-next",
+  "original_myo_suite_base_commit": "c0af9c656de2aa1807924e63d0d5320d77aa1ebd",
+  "original_deformer_version": "joint-rbf-contact-3",
+  "original_deformer_sha256": "71e1ea266506ca6f983224b80052c0f191d69ac766e5b846ecd2306c510f9cb4",
+  "sources": {
+    "FINAL_VALIDATION.json": "0cfe973ef31c52b84008fee391475a6c4d668da74e5df9afa7a4837b8e6f05d5",
+    "subjects/all-subject-validation.json": "f1c62e60345cfc639fdb2fc7e6f9c7e554af0c127fc1cea35a199d584bb864b3",
+    "subjects/subject-registration-summary.json": "6e7c718ea258aa8ef7cf88625a3030c34002c7bb7d7458c4c911f5b2e43ac3d4",
+    "conditioning/synthetic-validation.json": "73c541b1c8679a6b388a67c16ab572ba234dcceb9bbce27b73b97420da938be7",
+    "recorded-fullbody-validation.json": "217da592c57a8718f6c5b51a93733ec54a80d63a64b1ea850e5ee68d7c7c1cfd",
+    "recorded-native-constraint-audit.json": "e9cc7f27662c152036650f7ee6c38f770be64e9564cca8f3b970f2bc31f4fa29",
+    "recorded-geometry-v3-final/recorded-geometry-summary.json": "cccf999b1a0ed1f892eaba4dd10499a1221c07bbdd3303de0ea859b79322a997",
+    "fullbody-v3-final/geometry-audit.json": "1253c42b2088ce46eec8bd875de3ce1474e58e658f7109400a24571d735f1344",
+    "walking-v3-final/geometry-audit.json": "03d1e00d6b1307eb0cfc4f62df72f21f572c71ffe64f3df0473b111708838b72",
+    "subjects/S2/fullbody/geometry-validation.json": "8758245e88070377f8e4203e4f7b245b1e17982eb4d9f724b8c0a328709c24af",
+    "subjects/S2/walking/geometry-validation.json": "631a8bc31f39478e47ecea6a80c4f7a0c30c14db88edbf8c7b0ce41184ecb2cd",
+    "subjects/S3/fullbody/geometry-validation.json": "5464ae015cd324fb5f67f0d6d50109811c91d82f1d695524ae1d05ec998c6d6a",
+    "subjects/S3/walking/geometry-validation.json": "0f4723f298c08abbe3a49dee3966b5eb996e0c8ab3456b56858eddc43b0f9506",
+    "subjects/S4/fullbody/geometry-validation.json": "49b4c6fbff99ba7e21558d6df5e65fa89c91ad1197ac0c1160e159c4932db8e9",
+    "subjects/S4/walking/geometry-validation.json": "fbd064a52c011a4cc50fae46a27c9bdf52ace449ab9dd0b80dd52abd60124db4",
+    "subjects/S5/fullbody/geometry-validation.json": "6441e627f053d4d2f085207bbbfa82ae426168c872ee81f784bf83d878e4d486",
+    "subjects/S5/walking/geometry-validation.json": "f6b87e9d2573612fd58ce5a06e02cf3439568645172b5ab46223d6e8773319d6"
+  }
+}

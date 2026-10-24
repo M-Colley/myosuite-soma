@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "description": "Documentation descriptor for the pickle-free NPZ produced by save_dataset(), not a measured dataset or a physiological validation claim.",
+  "coordinate_frame": "SOMA_canonical_corrective_m",
+  "array_requirements": {
+    "rest_points": "float[V,3], canonical metres",
+    "mesh_names": "unicode[M], exact exported mesh order",
+    "mesh_counts": "integer[M], positive, sum equals V",
+    "rotations": "float[T,J,3,3], proper local rotations in checkpoint joint order",
+    "actuator_names": "unicode[A], unique exact native muscle actuator names",
+    "state_activation": "float[T,A], activation in [0,1]",
+    "reference_activation": "float[A], defines exact zero-corrective reference",
+    "state_FEATURE": "optional float[T,A], explicit declared supported physiology field",
+    "reference_FEATURE": "float[A], required for each included FEATURE",
+    "baseline": "float[T,V,3], released baseline unposed into canonical corrective coordinates",
+    "target": "float[T,V,3], registered observations in those same coordinates",
+    "observation_weights": "float[V], nonnegative confidence; zero marks unobserved vertices",
+    "subject": "unicode[T], stable subject IDs",
+    "motion": "unicode[T], complete recording IDs, not frame IDs",
+    "load": "unicode[T], external load protocol IDs",
+    "metadata": "unicode scalar containing finite JSON"
+  },
+  "metadata_requirements": {
+    "schema_version": 1,
+    "data_kind": [
+      "synthetic",
+      "paired_geometry",
+      "pose_only"
+    ],
+    "coordinate_frame": "SOMA_canonical_corrective_m",
+    "provenance": "Required nonempty description of geometry and physiology origin",
+    "feature_units": {
+      "activation": "dimensionless",
+      "actuator_length": "m_musculotendon",
+      "actuator_velocity": "m_s_musculotendon",
+      "actuator_force": "N_signed_transmission",
+      "fiber_length": "m_fiber",
+      "fiber_velocity": "m_s_fiber"
+    },
+    "measurement_protocol": "Required evidence for eligibility for external validation; unavailable for the synthetic fixture",
+    "baseline_checkpoint_sha256": "Recommended hash of the exact released baseline checkpoint",
+    "baseline_rigid_checkpoint_sha256": "Recommended hash of the exact rigid companion checkpoint",
+    "joint_names": "Recommended explicit checkpoint joint order"
+  },
+  "validation_rules": [
+    "Only include feature_units for states that are genuinely supplied.",
+    "MuJoCo actuator_length and actuator_velocity are musculotendon transmission quantities in the supported muscle models, not fiber measurements.",
+    "Pose-only data cannot train physiology-conditioned correctives.",
+    "Hold out entire subjects, motions or load conditions; no random adjacent-frame split.",
+    "Skin observations do not validate unobserved internal muscle surfaces.",
+    "All artifacts remain physiologically_validated=false in this research pipeline.",
+    "Synthetic artifacts require an explicit export opt-in and must remain labeled synthetic."
+  ]
+}

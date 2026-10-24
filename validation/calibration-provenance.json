@@ -1,0 +1,114 @@
+[
+  {
+    "example": "examples/subjects/S2/fullbody-raw.json",
+    "source_bundle_path": "subjects/S2/fullbody-s2.json",
+    "original_source_sha256": "4c127bf6a88bec05231ab1763e1b6925a4f8977126a55d3c20f80f109fbd1ecd",
+    "portable_example_sha256": "d88a0e7dbe61319ea912a3b58e65c8d6a850a530f48529d69381a6c601eaa6d6",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S2/fullbody-registered.json",
+    "source_bundle_path": "subjects/S2/fullbody/registered-profile.json",
+    "original_source_sha256": "7dfd9afe29cc59c12d35f63fe52fa6d4ed0285f605b2c316c6a8331eca9fe66c",
+    "portable_example_sha256": "7ac7d92c3225742a05e816f62e1cac39077388c87ea2f7ce1541def3f893be48",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S2/walking-raw.json",
+    "source_bundle_path": "subjects/S2/legs-s2.json",
+    "original_source_sha256": "4c8e3755a19f168016f25a904f919f391a12379de82d56ccdf1d6b2a5843e5a1",
+    "portable_example_sha256": "570377f8e3ed7b697ef0bd653505203f97ba56a5943580b369aec3242fe6bd83",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S2/walking-registered.json",
+    "source_bundle_path": "subjects/S2/walking/registered-profile.json",
+    "original_source_sha256": "1e0c512cd4ad3b61e69f242bf0cb8fbf7d697ce65825ac5d3b5a8d3b73b8d8eb",
+    "portable_example_sha256": "885138562ab7cd07b47b57c0b660e0c2b3ccb5ae1063c53acba5316cb8f3ea4b",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S3/fullbody-raw.json",
+    "source_bundle_path": "subjects/S3/fullbody-s3.json",
+    "original_source_sha256": "897938ec43508b5f7d332e5a446f07496a6dce6060e416222ecadda491d9e018",
+    "portable_example_sha256": "fa1d9fe116acd2b8da51bbab73de733ff14dc9c55dd03c9b4a8091b096ae7f5d",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S3/fullbody-registered.json",
+    "source_bundle_path": "subjects/S3/fullbody/registered-profile.json",
+    "original_source_sha256": "e51895a6f230bac01b20ece1256ddf9e47c5c8225671e2db3a7fffd61fd9282f",
+    "portable_example_sha256": "00e233c4f7752c2843a6049c034eedb9e5d3fe0e9182f5c03db241b916320f92",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S3/walking-raw.json",
+    "source_bundle_path": "subjects/S3/legs-s3.json",
+    "original_source_sha256": "45f428a508166e1fc724013089fc40bed2d94a7c886846ed4d22a986deb04813",
+    "portable_example_sha256": "fdde3a5f7d33e33084bde2e5d9024bcef003eccd415e9879d10bd4e035d1dd66",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S3/walking-registered.json",
+    "source_bundle_path": "subjects/S3/walking/registered-profile.json",
+    "original_source_sha256": "5827c0f9669eaf6e1a36fab1d51e716acb13798a4496ec3f21be7650bad004be",
+    "portable_example_sha256": "d985e81eb1d5b121ea67d49ac6f5b897d0a4e3b15a06ace0116258ab05db58eb",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S4/fullbody-raw.json",
+    "source_bundle_path": "subjects/S4/fullbody-s4.json",
+    "original_source_sha256": "69e3b18636eb1cd69e101bf467ee8e95a1c37f96b71e7675f6cb81c061d5e052",
+    "portable_example_sha256": "bff8bb07023860f3f69146f8ce9c897e722d01ada0cdbf74e6918e74f9bab518",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S4/fullbody-registered.json",
+    "source_bundle_path": "subjects/S4/fullbody/registered-profile.json",
+    "original_source_sha256": "9e011c6de950f2d589a934f430518e11dbe666104fb98cba025c69f6420c2156",
+    "portable_example_sha256": "5c209173d17c0e0468580947c69c707dad540d4e79ff484253b6c0851a707ea0",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S4/walking-raw.json",
+    "source_bundle_path": "subjects/S4/legs-s4.json",
+    "original_source_sha256": "8611b5526962afafe1a2c63cfeaddd752566fe587556b2aec710b974db722bf2",
+    "portable_example_sha256": "cf1fe42e960c712d1195045a60bf5226cf06fc711f61822048c302a933049987",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S4/walking-registered.json",
+    "source_bundle_path": "subjects/S4/walking/registered-profile.json",
+    "original_source_sha256": "45411a308dac17154b5f6adda1f83794ed3a152f34d4d5bb034da112deeb6fe9",
+    "portable_example_sha256": "dd3d82406e6c4eda6ac9f74cbd8613a10cd83bfdd6bec3ac8a0f907eadc9f143",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S5/fullbody-raw.json",
+    "source_bundle_path": "subjects/S5/fullbody-s5.json",
+    "original_source_sha256": "8c4005d7525bfd6eb65f0a32bcb70fc569d1db14f2fa2e1d9d3c5f5e851156e8",
+    "portable_example_sha256": "9feacfcb90ce0110f3c6634843319dc52ec7d1947040081d1889ec8b22af73ea",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S5/fullbody-registered.json",
+    "source_bundle_path": "subjects/S5/fullbody/registered-profile.json",
+    "original_source_sha256": "4cf4343703c06e233bd3a5a879dfbb820373c5800b88727fc7b6d45351a17e62",
+    "portable_example_sha256": "03ceec9c286af20a2c6cf2fb7d8d24b85a1eb1cf0e8be4cad70dcef73388a878",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S5/walking-raw.json",
+    "source_bundle_path": "subjects/S5/legs-s5.json",
+    "original_source_sha256": "fc841a2c569c2ce3ac1953e30725a05646e16d9261da0d3d79bf4b78317ae7c5",
+    "portable_example_sha256": "9e36a0f070ca77f33cc943cf4c4e1aa4db79781dea97bfe8edc959700b629df8",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  },
+  {
+    "example": "examples/subjects/S5/walking-registered.json",
+    "source_bundle_path": "subjects/S5/walking/registered-profile.json",
+    "original_source_sha256": "4c96eed80f7240f0266e26d5fd698df441d69d28fe03dcc729cc635c05f9dd10",
+    "portable_example_sha256": "dee005299cacb15d348234d6758e8a13f267d995e778e1f859538ee27c31feb4",
+    "modification": "Only data_root/checkpoint changed to relative placeholder paths; calibration and optional geometry parameters retained."
+  }
+]

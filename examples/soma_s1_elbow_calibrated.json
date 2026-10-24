@@ -1,0 +1,147 @@
+{
+  "data_root": "../local-assets/SKIM_dataset",
+  "subject": "S1",
+  "checkpoint": "../local-assets/SOMA_checkpoints/S1_ABLATION_UNET_RELEASE_V2_e40_best_data.pth",
+  "preset": "myoElbow1D6",
+  "environment": "myoElbowPose1D6MFixed-v0",
+  "basis": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "body_map": {
+    "RightArm": {
+      "body": "r_humerus",
+      "parent_body": "world",
+      "rest_rotation": [
+        [
+          0.027963759724781313,
+          -0.9957558465106476,
+          0.08768307865214901
+        ],
+        [
+          0.9996052237807983,
+          0.02761675816486846,
+          -0.005168293587201953
+        ],
+        [
+          0.0027248361776522944,
+          0.08779298837793037,
+          0.9961350141720136
+        ]
+      ]
+    },
+    "RightForeArm": {
+      "body": "r_ulna_radius_hand",
+      "parent_body": "r_humerus",
+      "basis": [
+        [
+          0.0035431148260314004,
+          0.9996027369779733,
+          -0.027960947113332447
+        ],
+        [
+          0.08702197768248807,
+          0.027546837506813228,
+          0.9958254601804488
+        ],
+        [
+          0.9962000912153938,
+          -0.005961540867782481,
+          -0.0868898054602704
+        ]
+      ],
+      "rest_rotation": [
+        [
+          0.9945157117266737,
+          0.10110414738713765,
+          -0.02676659316961245
+        ],
+        [
+          -0.10075538220277652,
+          0.9948116468478707,
+          0.01407623007057468
+        ],
+        [
+          0.028050883871279745,
+          -0.011302153641995456,
+          0.9995426000111716
+        ]
+      ]
+    }
+  },
+  "rest_qpos": [
+    0.0
+  ],
+  "output_rotation": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "output_translation": [
+    -0.005073778852670749,
+    -0.010535288853950034,
+    0.01749910332628937
+  ],
+  "scale": 1.0185849059931285,
+  "anchor_body": "r_humerus",
+  "anchor_joint": "RightArm",
+  "root_body": "r_humerus",
+  "muscle_map": {
+    "r-biceps-brachii": {
+      "BIClong": 1.0,
+      "BICshort": 1.0
+    },
+    "r-brachialis": {
+      "BRA": 1.0
+    },
+    "r-triceps-brachii-1": {
+      "TRIlong": 1.0,
+      "TRIlat": 1.0,
+      "TRImed": 1.0
+    },
+    "r-triceps-brachii-2": {
+      "TRIlong": 1.0,
+      "TRIlat": 1.0,
+      "TRImed": 1.0
+    },
+    "r-triceps-brachii-3": {
+      "TRIlong": 1.0,
+      "TRIlat": 1.0,
+      "TRImed": 1.0
+    }
+  },
+  "individual_muscles": [
+    "r-biceps-brachii",
+    "r-brachialis",
+    "r-triceps-brachii-1",
+    "r-triceps-brachii-2",
+    "r-triceps-brachii-3"
+  ],
+  "device": "cpu",
+  "batch_size": 16
+}

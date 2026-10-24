@@ -1,0 +1,65 @@
+name: Package checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Python ${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python: ["3.10"]
+        include:
+          - os: ubuntu-latest
+            python: "3.14"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - run: uv python install ${{ matrix.python }}
+      - run: uv venv --python ${{ matrix.python }}
+      - name: Install CPU inference and test dependencies
+        run: uv pip install -e ".[inference,render,test]" --torch-backend cpu
+      - run: uv run --no-sync python -m pytest --junitxml=pytest.xml
+      - run: uv run --no-sync python -m ruff check src tests
+      - run: uv run --no-sync python -m ruff format --check src tests
+      - run: uv run --no-sync python -m build
+      - name: Check built distributions
+        shell: bash
+        run: uv run --no-sync python -m twine check dist/*
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: checks-${{ matrix.os }}-${{ matrix.python }}
+          path: |
+            pytest.xml
+            dist/
+
+  myosuite-adapter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: MyoHub/myosuite
+          ref: c0af9c656de2aa1807924e63d0d5320d77aa1ebd
+          path: myosuite-source
+      - uses: astral-sh/setup-uv@v4
+      - run: uv python install 3.10
+      - run: uv venv --python 3.10
+      - run: uv pip install -e ".[inference,render,test]" -e myosuite-source --torch-backend cpu
+      - run: uv run --no-sync myosuite-soma install-adapter --myosuite-source myosuite-source
+      - run: uv run --no-sync python -m pytest tests/integration --junitxml=adapter.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: myosuite-adapter
+          path: adapter.xml

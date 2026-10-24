@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-24",
+  "package_version": "0.1.0a1",
+  "scope": "Executed standalone packaging, numeric API, synthetic and optional adapter checks; historical scientific studies remain separate",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "python": "3.10.20",
+  "versions": {
+    "myosuite-soma": "0.1.0a1",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "mujoco": "3.17.0",
+    "torch": "2.14.1+cpu",
+    "osqp": "1.1.3",
+    "usd-core": "26.8",
+    "myosuite": "3.0.0"
+  },
+  "full_package_and_adapter_tests": {
+    "tests": "212",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "1",
+    "time": "41.414"
+  },
+  "minimal_built_wheel_tests": {
+    "tests": "26",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "3",
+    "time": "5.401"
+  },
+  "minimal_wheel_scope": "Torch, MyoSuite and USD not installed; NPZ/chunk/preflight checks pass, 3 Torch-dependent cases skipped",
+  "s1_extraction_parity": {
+    "reference": "Original audited inference source and original quaternion helpers, isolated import namespace only",
+    "subject": "S1",
+    "poses": 8,
+    "muscle_meshes": 95,
+    "skin_max_absolute_error_m": 0.0,
+    "muscle_max_absolute_error_m": 0.0,
+    "joint_max_absolute_error_m": 0.0,
+    "quaternion_parity": {
+      "torch.float32": {
+        "quaternion_max_error": 0.0,
+        "matrix_max_error": 0.0
+      },
+      "torch.float64": {
+        "quaternion_max_error": 0.0,
+        "matrix_max_error": 0.0
+      }
+    }
+  },
+  "real_asset_export": {
+    "subject": "S1",
+    "environment": "myoMimicFullbody-v0",
+    "samples": 5,
+    "duration_seconds": 0.04,
+    "native_physics_changed": false
+  },
+  "blender_scene_check": {
+    "blender_version": "4.5.3 LTS",
+    "cache_samples": 5,
+    "meshes_compared": 96,
+    "muscles_compared": 95,
+    "maximum_world_vertex_error_m": 0,
+    "no_armature": true,
+    "no_native_tendon_objects": true,
+    "world_space_cache_preserved": true,
+    "camera_all_time_clipped_vertex_samples": 0
+  },
+  "source_sha256": {
+    "__init__.py": "d1805e7458f1711c7f52f4b6cffc6fda4a740fde36bc597e403b3deb353d1170",
+    "__main__.py": "7da07ab68fe521c5780a77aa6d154dfce113a649af013e5efa1ff14882044116",
+    "_torch_rotations.py": "6aa9490fb9c75fbdeaac902c6234dc3025ab415ceda69636209844af6fecc56c",
+    "adapter.py": "cbfc41617b462d2da75d9cacdeb8c3ee67d0f5d575f7b872d1229e2ecf0fa580",
+    "benchmark.py": "e655fc85cd35e05fbd42e84bd69d06142e52d1c4e71dfce9d2694c0217271544",
+    "cli.py": "fcda506e36b16f4d0757fa91dd987d665e3e89852c626c2f49b3a05cc31eca81",
+    "soma.py": "36fee10900c9cbfc3b8b8ed584f3af50cf9dec9132011ba43b9f7f03c8dcd650",
+    "soma_cache.py": "334a19e598879f17b86f0a668d021d2260fa2ebc4be185df4a045cf8d84f5156",
+    "soma_conditioning.py": "856b628d45847e4fc9144613bad797ee8eef774424f6ed529dcf127f6e894a9e",
+    "soma_geometry.py": "635ed8fc1f62d739a37bfe7dd07c154765bb18a22054440df4ba13c4501b930a",
+    "soma_model.py": "996f24d1e8f3367ad02b38ceae6fdda3261d72c6dab371f307e56eed98bb794e",
+    "soma_numeric.py": "e31ef03c9e46fb7d158eedabc197237c1e67a216eb07b7df3cdcb94fb3166be8",
+    "soma_retarget.py": "9c813157e8da7a40e28cef1c0254ec9605de976d4307e8594d0ce3f9042a0e60",
+    "usd.py": "2099acfd529eb0a04147328dddd9a7fc51c525846f231e0681dcce3dab73b627"
+  },
+  "adapter_patch_sha256": "5ed8537847f39a7e7c6a1ac9b107079bdc6060b6e21d952844f62fc56640b111",
+  "adapter_base": "c0af9c656de2aa1807924e63d0d5320d77aa1ebd",
+  "distribution_checks": "PEP517 wheel and sdist built; twine metadata checks pass; minimal wheel tested without editable source",
+  "hosted_ci": "Execution results are available on the repository Actions page after publication; local results above are independent of hosted CI."
+}

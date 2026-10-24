@@ -1,0 +1,91 @@
+{
+  "landmarks": {
+    "RightArm": {
+      "body": "humerus_r"
+    },
+    "RightForeArm": {
+      "body": "ulna_r"
+    },
+    "RightHand": {
+      "body": "lunate_r"
+    },
+    "RightUpLeg": {
+      "body": "femur_r"
+    },
+    "RightLeg": {
+      "body": "tibia_r"
+    },
+    "RightFoot": {
+      "body": "talus_r"
+    },
+    "RightToeBase": {
+      "body": "toes_r"
+    },
+    "LeftArm": {
+      "body": "humerus_l"
+    },
+    "LeftForeArm": {
+      "body": "ulna_l"
+    },
+    "LeftHand": {
+      "body": "lunate_l"
+    },
+    "LeftUpLeg": {
+      "body": "femur_l"
+    },
+    "LeftLeg": {
+      "body": "tibia_l"
+    },
+    "LeftFoot": {
+      "body": "talus_l"
+    },
+    "LeftToeBase": {
+      "body": "toes_l"
+    }
+  },
+  "orientation_weights": {
+    "Spine": 0.025,
+    "Spine1": 0.025,
+    "Spine2": 0.025,
+    "Spine3": 0.025,
+    "Spine4": 0.025,
+    "Neck": 0.025,
+    "RightShoulder": 0.025,
+    "RightArm": 0.025,
+    "RightForeArm": 0.025,
+    "RightHand": 0.025,
+    "LeftShoulder": 0.025,
+    "LeftArm": 0.025,
+    "LeftForeArm": 0.025,
+    "LeftHand": 0.025,
+    "RightUpLeg": 0.045,
+    "RightLeg": 0.045,
+    "RightFoot": 0.025,
+    "RightToeBase": 0.025,
+    "LeftUpLeg": 0.045,
+    "LeftLeg": 0.045,
+    "LeftFoot": 0.025,
+    "LeftToeBase": 0.025
+  },
+  "initial_guesses": [
+    {
+      "elv_angle_r": -1.5707963267948966,
+      "shoulder_elv_r": 1.0,
+      "elbow_flex_r": 0.5,
+      "elv_angle_l": -1.5707963267948966,
+      "shoulder_elv_l": 1.0,
+      "elbow_flex_l": 0.5
+    },
+    {
+      "elv_angle_r": 1.5707963267948966,
+      "shoulder_elv_r": 1.0,
+      "elbow_flex_r": 0.5,
+      "elv_angle_l": 1.5707963267948966,
+      "shoulder_elv_l": 1.0,
+      "elbow_flex_l": 0.5
+    }
+  ],
+  "temporal_weight": 0.002,
+  "neutral_weight": 0.0005,
+  "max_nfev": 40
+}
