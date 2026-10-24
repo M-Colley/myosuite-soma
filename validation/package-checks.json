@@ -15,11 +15,11 @@
     "myosuite": "3.0.0"
   },
   "full_package_and_adapter_tests": {
-    "tests": "212",
+    "tests": "215",
     "errors": "0",
     "failures": "0",
     "skipped": "1",
-    "time": "41.414"
+    "time": "36.750"
   },
   "minimal_built_wheel_tests": {
     "tests": "26",
@@ -73,13 +73,13 @@
     "adapter.py": "cbfc41617b462d2da75d9cacdeb8c3ee67d0f5d575f7b872d1229e2ecf0fa580",
     "benchmark.py": "e655fc85cd35e05fbd42e84bd69d06142e52d1c4e71dfce9d2694c0217271544",
     "cli.py": "fcda506e36b16f4d0757fa91dd987d665e3e89852c626c2f49b3a05cc31eca81",
-    "soma.py": "36fee10900c9cbfc3b8b8ed584f3af50cf9dec9132011ba43b9f7f03c8dcd650",
+    "soma.py": "01bf41b2d818ef7c0b18420c0e03d43529074bcaf0349b8e664e6d27db07ae1d",
     "soma_cache.py": "334a19e598879f17b86f0a668d021d2260fa2ebc4be185df4a045cf8d84f5156",
     "soma_conditioning.py": "856b628d45847e4fc9144613bad797ee8eef774424f6ed529dcf127f6e894a9e",
-    "soma_geometry.py": "635ed8fc1f62d739a37bfe7dd07c154765bb18a22054440df4ba13c4501b930a",
+    "soma_geometry.py": "dc752562bdec124fcbaf5535cd87de91affcc1fe5a64445e33daee98dc610931",
     "soma_model.py": "996f24d1e8f3367ad02b38ceae6fdda3261d72c6dab371f307e56eed98bb794e",
     "soma_numeric.py": "e31ef03c9e46fb7d158eedabc197237c1e67a216eb07b7df3cdcb94fb3166be8",
-    "soma_retarget.py": "9c813157e8da7a40e28cef1c0254ec9605de976d4307e8594d0ce3f9042a0e60",
+    "soma_retarget.py": "45fbcad4d8d6326279a7636a225b61c85bd7b79d736e820f52259ff49541dab3",
     "usd.py": "2099acfd529eb0a04147328dddd9a7fc51c525846f231e0681dcce3dab73b627"
   },
   "adapter_patch_sha256": "5ed8537847f39a7e7c6a1ac9b107079bdc6060b6e21d952844f62fc56640b111",

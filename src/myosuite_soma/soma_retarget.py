@@ -186,7 +186,8 @@ class JointCouplings:
         active = [
             e
             for e in range(model.neq)
-            if model.eq_type[e] == mujoco.mjtEq.mjEQ_JOINT and model.eq_active0[e]
+            if int(model.eq_type[e]) == int(mujoco.mjtEq.mjEQ_JOINT)
+            and model.eq_active0[e]
         ]
         pending = {int(model.eq_obj1id[e]): e for e in active}
         if len(pending) != len(active):
@@ -205,8 +206,8 @@ class JointCouplings:
         self.joints = [
             j
             for j in range(model.njnt)
-            if model.jnt_type[j]
-            in (mujoco.mjtJoint.mjJNT_HINGE, mujoco.mjtJoint.mjJNT_SLIDE)
+            if int(model.jnt_type[j])
+            in (int(mujoco.mjtJoint.mjJNT_HINGE), int(mujoco.mjtJoint.mjJNT_SLIDE))
             and j not in dependent
         ]
         if not self.joints or not np.all(model.jnt_limited[self.joints]):
@@ -228,9 +229,9 @@ class JointCouplings:
                 int(self.model.eq_obj1id[equality]),
                 int(self.model.eq_obj2id[equality]),
             )
-            if self.model.jnt_type[child] not in (
-                mujoco.mjtJoint.mjJNT_HINGE,
-                mujoco.mjtJoint.mjJNT_SLIDE,
+            if int(self.model.jnt_type[child]) not in (
+                int(mujoco.mjtJoint.mjJNT_HINGE),
+                int(mujoco.mjtJoint.mjJNT_SLIDE),
             ):
                 raise ValueError("Joint equality requires scalar joints")
             if parent >= 0 and parent not in expressions:
@@ -398,7 +399,7 @@ class SomaIKRetargeter:
             j
             for j in range(model.njnt)
             if model.jnt_bodyid[j] == self.root_id
-            and model.jnt_type[j] == mujoco.mjtJoint.mjJNT_FREE
+            and int(model.jnt_type[j]) == int(mujoco.mjtJoint.mjJNT_FREE)
         ]
         if len(free) != 1 or model.body_parentid[self.root_id] != 0:
             raise ValueError("IK root must contain one world-parented free joint")

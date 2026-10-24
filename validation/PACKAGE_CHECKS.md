@@ -2,7 +2,7 @@
 
 Executed locally on 2026-10-24. Exact counts, versions, source hashes and scope are in [package-checks.json](package-checks.json).
 
-- Full package + explicit MyoSuite renderer adapter: **211 passed, 1 skipped**. The skip requires Windows symbolic-link privilege.
+- Full package + explicit MyoSuite renderer adapter: **214 passed, 1 skipped**. The skip requires Windows symbolic-link privilege.
 - Built-wheel minimal environment: **23 passed, 3 skipped**, with Torch, MyoSuite and USD absent. The three skips need Torch.
 - Actual S1 inference extraction parity: eight poses, 95 individual surfaces plus skin, all coordinate differences exactly zero against the original audited source.
 - Actual new-package exports: three elbow samples and five full-body S1 anatomy samples, then Blender 4.5.3 scene construction. The full-body scene checks all 96 surfaces.

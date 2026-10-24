@@ -587,16 +587,16 @@ def _geom_extent(
     model: mujoco.MjModel, data: mujoco.MjData, index: int, normal: np.ndarray
 ) -> float:
     axis = data.geom_xmat[index].reshape(3, 3).T @ normal
-    size, kind = model.geom_size[index], model.geom_type[index]
-    if kind == mujoco.mjtGeom.mjGEOM_SPHERE:
+    size, kind = model.geom_size[index], int(model.geom_type[index])
+    if kind == int(mujoco.mjtGeom.mjGEOM_SPHERE):
         return float(size[0])
-    if kind == mujoco.mjtGeom.mjGEOM_CAPSULE:
+    if kind == int(mujoco.mjtGeom.mjGEOM_CAPSULE):
         return float(size[0] + abs(axis[2]) * size[1])
-    if kind == mujoco.mjtGeom.mjGEOM_ELLIPSOID:
+    if kind == int(mujoco.mjtGeom.mjGEOM_ELLIPSOID):
         return float(np.linalg.norm(axis * size))
-    if kind == mujoco.mjtGeom.mjGEOM_BOX:
+    if kind == int(mujoco.mjtGeom.mjGEOM_BOX):
         return float(np.abs(axis) @ size)
-    if kind == mujoco.mjtGeom.mjGEOM_CYLINDER:
+    if kind == int(mujoco.mjtGeom.mjGEOM_CYLINDER):
         return float(np.linalg.norm(axis[:2]) * size[0] + abs(axis[2]) * size[1])
     raise ValueError("Contact collision bounds support primitive source geoms only")
 
@@ -614,7 +614,7 @@ def _contact_inputs(
     if floor < 0 or any(index < 0 for index in ids):
         raise ValueError("Missing configured contact geometry")
     if (
-        model.geom_type[floor] != mujoco.mjtGeom.mjGEOM_PLANE
+        int(model.geom_type[floor]) != int(mujoco.mjtGeom.mjGEOM_PLANE)
         or model.geom_bodyid[floor] != 0
     ):
         raise ValueError("Visual contact requires an explicit static source plane")

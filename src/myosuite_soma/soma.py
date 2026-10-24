@@ -623,11 +623,14 @@ def _source_poses(model: mujoco.MjModel, qpos: np.ndarray, name: str) -> np.ndar
     if poses.ndim != 2 or poses.shape[1] != model.nq or not len(poses):
         raise ValueError(f"{name} must have shape (T, {model.nq})")
     for joint in range(model.njnt):
-        kind = model.jnt_type[joint]
-        if kind not in (mujoco.mjtJoint.mjJNT_FREE, mujoco.mjtJoint.mjJNT_BALL):
+        kind = int(model.jnt_type[joint])
+        if kind not in (
+            int(mujoco.mjtJoint.mjJNT_FREE),
+            int(mujoco.mjtJoint.mjJNT_BALL),
+        ):
             continue
         start = int(model.jnt_qposadr[joint])
-        if kind == mujoco.mjtJoint.mjJNT_FREE:
+        if kind == int(mujoco.mjtJoint.mjJNT_FREE):
             start += 3
         quat = poses[:, start : start + 4]
         if np.any(np.abs(quat) > 1.00001) or not np.allclose(
