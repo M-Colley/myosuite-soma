@@ -1,0 +1,20 @@
+{
+  "environment": "myoMimicFullbody-v0",
+  "model_package": "musclemimic_models==1.0.6",
+  "reference_frame": 0,
+  "reference_qpos_sha256": "c8a806b2d781c462d42edb6964bf1cf8b995db57cee90a9ae1737308fbca0569",
+  "source_model_sha256": "9589bf1b02f01f99432a7251e5d0fc801004b17d0777ab40f76b0ac4dfdb682f",
+  "mesh_geometry": "Actual learned S1 muscle world vertices at the same reference frame, from the validated raw fullbody cache.",
+  "distance_method": "Native MuJoCo wrapped spatial tendon paths resampled to64 arc-length points using muscle_tubes.resample_path. Median mesh-vertex distance to path and mean path-point distance to mesh vertices; these are point-cloud distances, not surface or attachment errors.",
+  "ranking": "spatial_score_mm=0.5*(mesh-to-path median + path-to-mesh mean). review_score_mm=spatial_score_mm-35 if a label alias/group candidate. All label candidates, top5 review candidates and top5 spatial candidates are retained. The35mm label prior is a review heuristic, not a validated likelihood.",
+  "review_warning": "Proximity can confuse adjacent muscle heads, tendons, merged regions or nearby crossing paths. No review candidate is automatically certified or enabled.",
+  "meshes": 95,
+  "native_paths": 354,
+  "subject": "S1",
+  "candidates": 498,
+  "review_status": "All unreviewed; no correspondence approved or enabled",
+  "original_csv_sha256": "701c615b2dd4086ca8a5b49ceb4a94a411f85a35fea52a18954e68f4a232ef00",
+  "csv_sha256": "9453d33d2baa8f1d8005eee81980619d9a38e64cfffab03cfdc28b836c77b6d2",
+  "historical_source_report_sha256": "55f59772b1c3008313b02d13f1248b208c184a43b37802607bf544fde047257c",
+  "scope": "Existing S1 rest-pose candidate ranking from the historical integration audit; not independent anatomy ground truth. Units are millimetres. Label-group weights are disabled review proposals."
+}

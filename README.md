@@ -96,6 +96,22 @@ Registration is opt-in. Longer S2–S5 checks covered 1,192 source states with f
 
 Physiology-conditioned geometry is implemented as a research extension. Its supplied demonstration has fabricated targets on real topology; measured matched-pose tissue geometry under different loads is still needed for physiological validation. Muscle-head and tendon correspondences remain subject to anatomical review.
 
+## Work remaining
+
+As of **2026-10-24**, upstream MyoSuite `dev` still points to the tested adapter commit `c0af9c656de2aa1807924e63d0d5320d77aa1ebd`. The current integration has passed the local package/adapter tests and hosted platform matrix; the following research and maintenance work remains open.
+
+### Work that can proceed with the current assets
+
+- [ ] **Review anatomical correspondences.** Start with the [S1 candidate worksheet](validation/mapping-review/s1-candidates.csv) and its [provenance and ranking method](validation/mapping-review/provenance.json): 498 candidate pairs cover all 95 S1 anatomical surfaces and compare against 354 native actuator paths. Every candidate is **unreviewed**; proximity and label-group weights are review aids, and no proposal is enabled automatically. Record reviewer, evidence, side, head/compartment, and whether each decision is an exact match, explicit group, tendon proxy or unresolved region. Extend the inventory separately for S2–S5. Head-specific approval needs anatomical evidence; filenames alone are insufficient.
+- [ ] **Improve registration/contact on independent cases.** Use the published raw/corrected [measurements](validation/measurements.json) as the baseline. Fit and select parameters on development data, then freeze them before whole-motion/subject holdouts. Address worsened full-body withheld landmarks for S2–S4 and S5's 88.52 mm residual walking penetration. Before broader default use, demonstrate improved withheld alignment and native-relative foot clearance across supported cases while respecting displacement/shape bounds and preserving source mechanics. Retain unsuccessful cases and raw output.
+- [ ] **Strengthen temporal and surface-quality checks.** Extend sampled quality probes to all-frame self-intersections, muscle/skin intersections, attachment continuity and volume/area distortion; track correction velocity and acceleration alongside penetration. Define acceptance thresholds before held-out evaluation. A converged optimizer or positive sampled Jacobian is insufficient to establish anatomical plausibility. Keep registration/contact opt-in while these gates remain unmet.
+- [ ] **Maintain and prepare the adapter for upstream review.** Record each checked MyoSuite revision. Adding support requires a clean install/apply, renderer regressions, native-parameter comparisons and a short real-asset USD/Blender export; patch applicability alone is insufficient. Keep the tested revision pinned until that evidence exists. Prepare a small upstream integration proposal after the interface is agreed, keeping inference and experimental methods in this package.
+
+### Work requiring new measurements or anatomical review
+
+- [ ] **Collect matched-pose geometry under different loads.** Capture repeated unloaded, loaded and co-contraction conditions with synchronized pose, geometry and measured load/EMG provenance. Record coordinate conventions, timing, correspondences, uncertainty and which tissues are actually observed. Use the [conditioning data schema and protocol](docs/CONDITIONING.md). Skin observations do not supply validated internal-muscle targets; fibre quantities require genuine measurements or a separately validated model.
+- [ ] **Validate physiological geometry independently.** Compare the conditioned model with the unchanged pose-only baseline on measured whole-recording, load-condition and subject holdouts. Report errors, uncertainty, failure cases and anatomy/contact quality. Preserve the synthetic-only gate until independent measured evidence supports physiological claims; the existing fabricated-target demonstration cannot satisfy this requirement.
+
 ## Development
 
 ```sh
