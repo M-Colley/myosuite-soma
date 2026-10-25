@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "provenance": {
+    "status": "synthetic",
+    "source": "Invented schema template; replace with the actual recording source"
+  },
+  "activation_source": "synthetic",
+  "actuator_names": ["CALF"],
+  "dof_names": ["ANKLE"],
+  "target_type": "actuator",
+  "units": {
+    "time": "s",
+    "qpos": "SI",
+    "qvel": "SI/s",
+    "joint_torque_Nm": "Nm",
+    "activation": "unitless"
+  },
+  "conventions": {
+    "torque": "Invented template: already expressed as signed native actuator torque",
+    "qpos": "Native model order; metres/radians and unit quaternions",
+    "activation": "Invented normalized values, not measured EMG"
+  }
+}

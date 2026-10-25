@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "myosuite-soma"
-version = "0.1.0a2"
+version = "0.2.0a1"
 description = "SOMA pose-conditioned muscle and skin anatomy for MuJoCo and MyoSuite"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -24,6 +24,7 @@ classifiers = [
 inference = ["torch>=2.13"]
 myosuite = ["myosuite>=3.0.0"]
 render = ["mujoco[usd]>=3.15", "imageio[ffmpeg]>=2.31", "Pillow>=10.1"]
+data = ["ezc3d>=1.6"]
 benchmark = ["psutil>=5.9"]
 test = ["pytest>=8", "ruff==0.4.4", "build>=1.2", "twine>=5"]
 
@@ -39,7 +40,7 @@ myosuite-soma = "myosuite_soma.cli:main"
 packages = ["src/myosuite_soma"]
 
 [tool.hatch.build.targets.sdist]
-include = ["src", "tests", "docs", "examples", "integration", "validation", "licenses", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "CITATION.cff", "pyproject.toml"]
+include = ["src", "tests", "docs", "examples/physical_*.json", "examples/*.schema.json", "integration", "validation/*.md", "licenses", "README.md", "LICENSE", "THIRD_PARTY_NOTICES.md", "CITATION.cff", "pyproject.toml"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -19,5 +19,16 @@ renders/
 *.gltf
 *.obj
 *.skn
+*.mjb
+*.mjcf
+*.stl
+*.ply
+*.b3d
+*.c3d
+*.docx
+*.xlsx
+*.mat
+*.nrrd
+physical-output/
 *.npz
 !tests/data/*.npz

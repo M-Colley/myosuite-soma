@@ -4,7 +4,7 @@
 
 **Pose-dependent 3D muscle and skin anatomy for MuJoCo and MyoSuite.**
 
-An independent, experimental integration of [SOMA](https://vcai.mpi-inf.mpg.de/projects/SOMA/) with musculoskeletal simulation. The standalone backend predicts and caches anatomy; a small optional adapter connects it to MyoSuite's existing USD/Blender renderer.
+An independent, experimental integration of [SOMA](https://vcai.mpi-inf.mpg.de/projects/SOMA/) with musculoskeletal simulation. The standalone backend predicts and caches anatomy; a small optional adapter connects it to MyoSuite's existing USD/Blender renderer. Optional physical calibration builds separate MuJoCo model variants from explicit anatomical and experimental inputs.
 
 [Validation and limits](validation/REPORT.md) · [Integration guide](integration/README.md) · [Local GLB conversion](docs/GLB.md)
 
@@ -17,8 +17,9 @@ An independent, experimental integration of [SOMA](https://vcai.mpi-inf.mpg.de/p
 - Numeric NPZ and chunked caches, optional bounded-error compression, standalone USD and GLB export.
 - A reference rigged GLB for MyoSuite's existing skin importer, plus baked GLB animations for learned deformations.
 - Explicit source-model, trajectory and conditioning provenance checks.
+- Local architecture/attachment and torque-data import, physical model variants, bounded calibration with recording holdouts, and an experimental compliant-muscle runtime.
 
-The released model is pose-driven. Its surfaces provide visual anatomy while MyoSuite supplies native motion and physiology. The integration leaves source strength, optimal fibre length, tendon slack length, joints, masses and collision mechanics unchanged.
+The released SOMA model is pose-driven. Its surfaces provide visual anatomy while MyoSuite supplies native motion and physiology. Visual export preserves source physics. The separate, opt-in physical builder changes force, effective length ranges, routing, segment properties or contact proxies in an independent model; it never modifies the original model in place.
 
 ## Install
 
@@ -104,6 +105,20 @@ Conversion runs locally using separately obtained assets. Generated GLBs, weight
 
 The GLB specification CI job creates invented meshes and checks both modes with the pinned official Khronos validator. It uploads no generated GLBs. Python distributions exclude the historical preview-media directory.
 
+## Physical calibration
+
+Version `0.2.0a1` adds an independent physical-model workflow:
+
+```sh
+myosuite-soma physical datasets
+myosuite-soma physical build --model source.xml --profile local-assets/physical-profile.json --output local-assets/physical-model
+myosuite-soma physical fit --model source.xml --observations local-assets/observations.npz --config fit-config.json --output local-assets/fitted-model
+```
+
+The builder supports explicit strength and fibre/slack targets, attachment and wrapping edits, mass/COM/inertia, and capsule contact proxies. Architecture estimates retain source and PCSA/pennation conventions. Native torque fitting uses separate recording holdouts and reports parameter identifiability; EMG remains an explicitly declared proxy. Data adapters read local architecture tables, hand attachment coordinates and optional C3D dynamometer recordings (`pip install '.[data]'`).
+
+An experimental runtime adds elastic tendon forces and constant-thickness pennation using implicit fibre steps and native moment arms. It is a separate research model with numerical tests, not a physiologically validated replacement. Native model variants, raw/processed observations and compliant rollouts remain local. See the [physical calibration guide](docs/PHYSICAL_CALIBRATION.md) for commands, schemas, constitutive assumptions and validation limits, and the [physical checks](validation/PHYSICAL_CHECKS.md) for tested scope.
+
 ## Validation and remaining limits
 
 The precursor implementation was compared with released SOMA equations on **390 poses spanning all 74 recordings across S1–S5**. Maximum coordinate differences were below **0.0006 mm for skin** and **0.0008 mm for individual surfaces**. These measure equation parity, not anatomical truth. The standalone extraction has its own package-level tests and real-asset parity checks recorded in [`validation/`](validation/).
@@ -125,6 +140,7 @@ As of **2026-10-24**, upstream MyoSuite `dev` still points to the tested adapter
 
 ### Work requiring new measurements or anatomical review
 
+- [ ] **Validate physical personalization on independent measurements.** Use the [physical workflow](docs/PHYSICAL_CALIBRATION.md) to register reviewed attachments and segment properties, fit bounded muscle parameters on development recordings, and evaluate whole-recording holdouts with synchronized motion, torque and external loads. Obtain subject-specific fibre/slack constraints where these parameters are needed; torque alone can leave muscle parameters unidentifiable. Compare contact and forward rollouts against the unchanged native model. Population architecture, geometric allometry and numerical recovery do not establish personalization accuracy.
 - [ ] **Collect matched-pose geometry under different loads.** Capture repeated unloaded, loaded and co-contraction conditions with synchronized pose, geometry and measured load/EMG provenance. Record coordinate conventions, timing, correspondences, uncertainty and which tissues are actually observed. Use the [conditioning data schema and protocol](docs/CONDITIONING.md). Skin observations do not supply validated internal-muscle targets; fibre quantities require genuine measurements or a separately validated model.
 - [ ] **Validate physiological geometry independently.** Compare the conditioned model with the unchanged pose-only baseline on measured whole-recording, load-condition and subject holdouts. Report errors, uncertainty, failure cases and anatomy/contact quality. Preserve the synthetic-only gate until independent measured evidence supports physiological claims; the existing fabricated-target demonstration cannot satisfy this requirement.
 

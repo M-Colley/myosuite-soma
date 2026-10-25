@@ -16,12 +16,22 @@ COMMANDS = {
     "cache": "soma_cache",
     "conditioning": "soma_conditioning",
     "benchmark": "benchmark",
+    "physical": "physical",
 }
 
 
 def _doctor() -> None:
     report = {"myosuite-soma": __version__}
-    for name in ("numpy", "scipy", "mujoco", "torch", "osqp", "myosuite", "usd-core"):
+    for name in (
+        "numpy",
+        "scipy",
+        "mujoco",
+        "torch",
+        "osqp",
+        "myosuite",
+        "usd-core",
+        "ezc3d",
+    ):
         try:
             report[name] = metadata.version(name)
         except metadata.PackageNotFoundError:

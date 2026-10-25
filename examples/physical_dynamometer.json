@@ -1,0 +1,29 @@
+{
+  "recording_id": "invented-recording",
+  "provenance": {
+    "status": "synthetic",
+    "source": "Invented single-axis schema template; no dataset measurements"
+  },
+  "activation_source": "emg_proxy",
+  "target_type": "actuator",
+  "torque_convention": "Replace with reviewed gravity/inertia/external-load correction and native sign",
+  "qpos_reference": [0.0],
+  "qvel_reference": [0.0],
+  "qpos_index": 0,
+  "dof_index": 0,
+  "dof_name": "ANKLE",
+  "split": "train",
+  "angle": {"channel": "REVIEW_ANGLE_CHANNEL", "gain": 0.017453292519943295, "offset": 0.0},
+  "torque": {"channel": "REVIEW_TORQUE_CHANNEL", "gain": 1.0, "offset": 0.0},
+  "activations": {
+    "CALF": {
+      "channel": "REVIEW_EMG_CHANNEL",
+      "gain": 1.0,
+      "offset": 0.0,
+      "highpass_hz": 20.0,
+      "rectify": true,
+      "lowpass_hz": 6.0,
+      "clip": false
+    }
+  }
+}

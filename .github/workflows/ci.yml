@@ -35,6 +35,8 @@ jobs:
       - name: Check built distributions
         shell: bash
         run: uv run --no-sync python -m twine check dist/*
+      - name: Reject model, dataset and media files in distributions
+        run: uv run --no-sync python tests/tools/check_distribution_assets.py dist
       - uses: actions/upload-artifact@v4
         if: always()
         with:

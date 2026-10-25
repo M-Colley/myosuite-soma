@@ -1,0 +1,28 @@
+name: Physical calibration checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  local-data-adapters:
+    name: MuJoCo ${{ matrix.mujoco }} / local data adapters
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        mujoco: ["3.15.0", "3.17.0"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - run: uv python install 3.10
+      - run: uv venv --python 3.10
+      - run: uv pip install ".[data,test]" "mujoco==${{ matrix.mujoco }}"
+      - name: Check physical builder, data adapters, fitting and compliant dynamics
+        run: uv run --no-sync python -m pytest tests/test_physical*.py tests/test_compliant*.py
+      # Fixtures are invented at runtime. No datasets or generated models uploaded.

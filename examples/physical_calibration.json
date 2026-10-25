@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "target_type": "actuator",
+  "holdout_recordings": ["HELD_OUT_WHOLE_RECORDING"],
+  "allow_emg_proxy": false,
+  "muscles": {
+    "CALF": {
+      "force_N": [10.0, 3000.0],
+      "passive_force_scale": [0.1, 2.0]
+    }
+  },
+  "regularization": 0.001,
+  "max_nfev": 300,
+  "rom_samples": 9,
+  "rollout_steps": 100,
+  "rollout_activation": 0.05
+}
