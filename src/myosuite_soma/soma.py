@@ -856,6 +856,29 @@ def generate_animation(
         ValueError: Invalid data, mappings, calibration or generated geometry.
         FileNotFoundError: SOMA assets have not been installed at configured paths.
     """
+    return _generate_animation(
+        config_path,
+        model,
+        qpos,
+        time,
+        actuator_names,
+        activation,
+        physiology=physiology,
+    )
+
+
+def _generate_animation(
+    config_path: str | Path,
+    model: mujoco.MjModel,
+    qpos: np.ndarray,
+    time: np.ndarray,
+    actuator_names: Sequence[str],
+    activation: np.ndarray,
+    *,
+    physiology: dict[str, np.ndarray] | None = None,
+    predictor: Any = None,
+) -> SomaAnimation:
+    """Shared generation path; a caller-owned predictor avoids loading twice."""
     config = SomaConfig.from_json(config_path)
     times = _finite(time, "time")
     poses = _source_poses(model, qpos, "qpos")
@@ -866,7 +889,8 @@ def generate_animation(
     visual_activation = map_activations(config.muscle_map, actuator_names, activation)
     if np.shape(activation) != (len(times), len(actuator_names)):
         raise ValueError("activation must have one row per animation frame")
-    predictor = _load_predictor(config, config_path)
+    if predictor is None:
+        predictor = _load_predictor(config, config_path)
     rotations = retarget_rotations(
         config, model, poses, predictor.joint_names, predictor.parents
     )

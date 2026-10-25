@@ -1,5 +1,6 @@
 * text=auto eol=lf
 *.jpg -text
 *.png -text
+*.glb -text
 *.patch -whitespace
 tests/fixtures/** -whitespace

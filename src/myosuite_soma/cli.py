@@ -47,7 +47,14 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument(
         "command",
         nargs="?",
-        choices=[*COMMANDS, "render", "install-adapter", "export-usd", "doctor"],
+        choices=[
+            *COMMANDS,
+            "render",
+            "install-adapter",
+            "export-usd",
+            "export-glb",
+            "doctor",
+        ],
     )
     parsed = parser.parse_args(arguments[:1])
     if parsed.command is None:
@@ -75,6 +82,11 @@ def main(argv: list[str] | None = None) -> None:
         from myosuite_soma.usd import main as export
 
         export(rest)
+        return
+    if parsed.command == "export-glb":
+        from myosuite_soma.glb_export import main as export_glb
+
+        export_glb(rest)
         return
     if parsed.command == "render":
         from myosuite_soma.adapter import renderer

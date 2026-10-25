@@ -286,6 +286,20 @@ class SOMAModel:
                 )
             )
 
+    def skinning_weights(self) -> dict[str, np.ndarray]:
+        """Copy native per-vertex joint weights for the loaded output surfaces.
+
+        Columns follow ``joint_names``. Individual objects use the same
+        interpolated layer weights as :meth:`predict`; no weights are fitted,
+        pruned or guessed from distance to the simulator's skeleton here.
+        """
+        result = {
+            mesh.name: binding[3].detach().cpu().numpy().copy()
+            for mesh, binding in zip(self.meshes, self._bindings)
+        }
+        result[self.skin_mesh.name] = self._weights.detach().cpu().numpy().copy()
+        return result
+
     def predict(
         self, rotations: np.ndarray, root_positions: np.ndarray | None = None
     ) -> SOMAPrediction:

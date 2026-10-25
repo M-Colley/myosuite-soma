@@ -14,6 +14,7 @@ Source model + recorded qpos/time + named native physiology
   -> optional shared world-space registration field
   -> optional per-foot native-membership contact morphology
   -> validated numeric geometry cache
+  -> standalone USD or baked GLB animation
   -> optional external MyoSuite USD/Blender renderer
 ```
 
@@ -34,6 +35,14 @@ Source model + recorded qpos/time + named native physiology
 Canonical additive vectors use the same skinning transport as the released
 geometry. Root translation is not applied to those vectors twice. Geometry is
 fully posed before USD export, so the renderer must not apply another armature.
+
+The [GLB exporter](GLB.md) has two explicit contracts. Baked animation stores
+the same fully posed world-space samples as morph targets without an armature.
+Reference rig export evaluates geometry at the source model's `qpos0`, binds
+it to named source bodies and exports their hierarchy, inverse bind matrices
+and remapped subject weights. Subsequent native skinning is an approximation;
+it does not run SOMA's predictor or recompute registration/contact. Neither
+export changes source physics.
 
 The contact field is a visual correction, not a material or pressure solver.
 Source collision soles can penetrate a soft-contact plane; report absolute

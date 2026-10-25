@@ -1,0 +1,31 @@
+name: GLB specification checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  khronos-validator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: uv python install 3.10
+      - run: uv venv --python 3.10
+      - name: Install only core Python dependencies
+        run: uv pip install .
+      - name: Install pinned official Khronos validator
+        run: npm install --prefix "$RUNNER_TEMP/soma-gltf-validator" --no-audit --no-fund --ignore-scripts --save-exact gltf-validator@2.0.0-dev.3.10
+      - name: Generate invented synthetic geometry locally
+        run: uv run --no-sync python tests/tools/make_glb_fixtures.py "$RUNNER_TEMP/soma-glb-fixtures"
+      - name: Reject GLB errors and warnings
+        run: node tests/tools/validate_glb.cjs "$RUNNER_TEMP/soma-gltf-validator" "$RUNNER_TEMP/soma-glb-fixtures"
+      # No model, dataset, checkpoint, or generated GLB is uploaded as an artifact.

@@ -6,9 +6,7 @@
 
 An independent, experimental integration of [SOMA](https://vcai.mpi-inf.mpg.de/projects/SOMA/) with musculoskeletal simulation. The standalone backend predicts and caches anatomy; a small optional adapter connects it to MyoSuite's existing USD/Blender renderer.
 
-![Anatomy and rendering demonstrations](assets/contact-sheet.jpg)
-
-[Download six demonstration videos](https://github.com/M-Colley/myosuite-soma/releases/tag/v0.1.0a1) · [Validation and limits](validation/REPORT.md) · [Integration guide](integration/README.md)
+[Validation and limits](validation/REPORT.md) · [Integration guide](integration/README.md) · [Local GLB conversion](docs/GLB.md)
 
 ## What it provides
 
@@ -16,7 +14,8 @@ An independent, experimental integration of [SOMA](https://vcai.mpi-inf.mpg.de/p
 - Named skeletal calibration, world placement and bounded recorded-motion retargeting.
 - Optional shared anatomical registration and native-foot visual contact corrections.
 - Experimental physiology-conditioned geometry training/inference with a synthetic-data gate.
-- Numeric NPZ and chunked caches, optional bounded-error compression, standalone USD export.
+- Numeric NPZ and chunked caches, optional bounded-error compression, standalone USD and GLB export.
+- A reference rigged GLB for MyoSuite's existing skin importer, plus baked GLB animations for learned deformations.
 - Explicit source-model, trajectory and conditioning provenance checks.
 
 The released model is pose-driven. Its surfaces provide visual anatomy while MyoSuite supplies native motion and physiology. The integration leaves source strength, optimal fibre length, tendon slack length, joints, masses and collision mechanics unchanged.
@@ -79,6 +78,7 @@ save_animation("anatomy.npz", animation)
 ```sh
 myosuite-soma cache anatomy.npz anatomy.chunks --chunk-frames 16 --max-error-mm 0.1
 myosuite-soma export-usd anatomy.npz anatomy.usdc
+myosuite-soma export-glb animation anatomy.npz local-assets/anatomy-motion.glb
 myosuite-soma retarget --help
 myosuite-soma conditioning --help
 myosuite-soma benchmark --help
@@ -86,7 +86,23 @@ myosuite-soma benchmark --help
 
 The retargeter accepts either a standalone MuJoCo XML `--model` or an optional MyoSuite `--env`. Recording rotation packing and root conventions are explicit separate inputs. Recorded replay produces kinematics; it infers no activation or control policy.
 
-`AnimationArchive.iter_chunks()` has bounded-memory reads. USD/Blender export currently materializes the animation. This is an offline visualization pipeline.
+`AnimationArchive.iter_chunks()` has bounded-memory reads. USD/Blender and GLB export currently materialize the animation. This is an offline visualization pipeline.
+
+### GLB compatibility
+
+Create a reference skin bound to the source model's named bodies at `qpos0`:
+
+```sh
+myosuite-soma export-glb rigged --config local-soma.json --env myoMimicFullbody-v0 local-assets/anatomy-skin.glb
+```
+
+That file works with MyoSuite's existing `--skin local-assets/anatomy-skin.glb` workflow; the SOMA renderer adapter is not needed to load the reference GLB. A standalone MuJoCo XML can replace `--env` with `--model`. The supplied calibration and optional explicit joint map must cover the subject's weighted joints. Add `--include-muscles` to include separate internal surfaces for a general GLB viewer; MyoSuite's skin importer reads the skin surface only.
+
+The rigged file uses ordinary linear blend skinning during playback. To preserve the learned pose-dependent shapes for a recorded sequence, use `export-glb animation`: it bakes the cached world-space vertices and normals into standard glTF morph-target animation. MyoSuite's skin importer does not evaluate that baked animation. See the [GLB guide](docs/GLB.md) for commands, mapping rules and limits.
+
+Conversion runs locally using separately obtained assets. Generated GLBs, weights, datasets and model geometry must stay outside the repository, package and release assets; conversion does not grant redistribution rights. Follow the accompanying [SOMA download terms](https://gvv-assets.mpi-inf.mpg.de/soma/).
+
+The GLB specification CI job creates invented meshes and checks both modes with the pinned official Khronos validator. It uploads no generated GLBs. Python distributions exclude the historical preview-media directory.
 
 ## Validation and remaining limits
 

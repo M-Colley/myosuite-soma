@@ -65,6 +65,26 @@ directly to USD without the MyoSuite adapter:
 myosuite-soma export-usd animation.npz anatomy.usda
 ```
 
+GLB export uses the core dependencies and needs neither USD nor Blender:
+
+```shell
+myosuite-soma export-glb animation animation.npz local-assets/anatomy-motion.glb
+```
+
+This bakes the recorded vertex deformations for playback in a glTF viewer. To
+create a reference skin for MyoSuite's native GLB importer instead, run:
+
+```shell
+myosuite-soma export-glb rigged --config local-soma.json --env myoMimicFullbody-v0 local-assets/anatomy-skin.glb
+```
+
+Use a calibration for that exact source model. A standalone XML can be supplied
+with `--model` instead of `--env`. Rigged export needs local subject assets and
+the `inference` extra; loading an existing numeric animation does not. Follow
+the [GLB guide](GLB.md) for joint coverage, native skin import and the distinction
+between ordinary skinning and baked SOMA deformations. Keep converted anatomy
+files local under the accompanying asset terms.
+
 Here `model` is an existing `mujoco.MjModel`; the arrays come from your
 simulation or validated kinematic replay. No environment or asset download is
 created implicitly. Unsupported names, dimensions, quaternions and calibration

@@ -15,5 +15,9 @@ renders/
 *.zip
 *.blend
 *.usdc
+*.glb
+*.gltf
+*.obj
+*.skn
 *.npz
 !tests/data/*.npz
